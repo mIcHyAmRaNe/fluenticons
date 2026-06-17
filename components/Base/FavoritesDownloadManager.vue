@@ -42,13 +42,23 @@ export default {
             return;
           default:
             const promises = this.icons.map(
-              async (item) => await getIconSnippet(type, item.svgFileName)
+              async (item) => await getIconSnippet(type, item.svgFileName),
             );
             const iconSnippets = await Promise.all(promises);
-            const finalIcons = this.icons.map((icon, index) => ({
-              name: `${icon.name}.${format}`,
-              content: iconSnippets[index],
-            }));
+            const finalIcons = this.icons.map((icon, index) => {
+              // Extract type from componentName (Filled/Outlined)
+              let typeSuffix = "";
+              if (icon.componentName.includes("Filled")) {
+                typeSuffix = "_filled";
+              } else if (icon.componentName.includes("Outlined")) {
+                typeSuffix = "_outlined";
+              }
+
+              return {
+                name: `${icon.name}${typeSuffix}.${format}`,
+                content: iconSnippets[index],
+              };
+            });
             downloadAsZip(finalIcons);
         }
       }
