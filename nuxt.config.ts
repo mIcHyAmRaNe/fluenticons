@@ -2,7 +2,7 @@ import { defineNuxtConfig } from "nuxt/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2026-06-18",
 
   srcDir: ".",
 
@@ -135,6 +135,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: "static",
+    preset: "cloudflare-pages",
   },
 });
