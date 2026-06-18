@@ -1,18 +1,12 @@
 <template>
   <div>
     <div
-      v-if="
-        $store.state.auth.user?.email !== 'milos@fluenticons.co' &&
-        $store.state.auth.user?.email !== 'colton@fluenticons.co'
-      "
+      v-if="!isAdmin"
     ></div>
 
     <div
       class="m-8"
-      v-if="
-        $store.state.auth.user?.email === 'milos@fluenticons.co' ||
-        $store.state.auth.user?.email === 'colton@fluenticons.co'
-      "
+      v-if="isAdmin"
     >
       <Header />
 
@@ -140,44 +134,44 @@
   </div>
 </template>
 
-<script>
-import Header from "~/components/Header";
+<script setup>
+const { user } = useUserSession()
+const config = useRuntimeConfig()
+const api = config.public.api
 
-export default {
-  components: { Header },
-  data() {
-    return {
-      title: "",
-      description: "",
-      img: "",
-      content: "",
-      view: null,
-    };
-  },
-  mounted() {
-    console.log(this.$store.state.auth);
-  },
-  methods: {
-    async submitForm() {
-      const formData = new FormData();
-      formData.append("title", this.title);
-      formData.append("content", this.content);
-      formData.append("description", this.description);
-      formData.append("img", this.img);
-      const response = await this.$axios.$post(`/api/blog`, formData);
-      if (response.success) {
-        window.location.href = "/blog";
-      }
-    },
-    handleFile(e) {
-      if (!e.target.files?.[0]) return;
-      let file = e.target.files[0];
-      this.img = file;
-      this.view = URL.createObjectURL(file);
-      e.target.value = "";
-    },
-  },
-};
+const title = ref('')
+const description = ref('')
+const img = ref('')
+const content = ref('')
+const view = ref(null)
+
+const isAdmin = computed(() => {
+  const email = user.value?.email
+  return email === 'milos@fluenticons.co' || email === 'colton@fluenticons.co'
+})
+
+async function submitForm() {
+  const formData = new FormData()
+  formData.append('title', title.value)
+  formData.append('content', content.value)
+  formData.append('description', description.value)
+  formData.append('img', img.value)
+  const response = await $fetch('/api/blog', {
+    method: 'POST',
+    body: formData,
+  })
+  if (response.success) {
+    window.location.href = '/blog'
+  }
+}
+
+function handleFile(e) {
+  if (!e.target.files?.[0]) return
+  const file = e.target.files[0]
+  img.value = file
+  view.value = URL.createObjectURL(file)
+  e.target.value = ''
+}
 </script>
 
 <style class="postcss">

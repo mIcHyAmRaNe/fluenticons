@@ -1,34 +1,30 @@
 <template>
   <div class="container mx-auto p-8">
     <div class="grid grid-cols-4 lg:grid-cols-6 gap-6" v-if="icons.length">
-      <lazy-icon-card
+      <LazyIconCard
         v-for="(icon, i) in icons"
         :key="i"
         :icon="icon"
         @setIcon="setIcon(icon)"
-        :selected="icon.name === selectedIcon.name ? true : false"
+        :selected="icon.name === selectedIcon.name"
       />
     </div>
     <base-favorites-empty v-else />
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    selectedIcon: {
-      type: Object,
-    },
-  },
-  computed: {
-    icons() {
-      return this.$store.getters.favorites;
-    },
-  },
-  methods: {
-    setIcon(payload) {
-      this.$emit("setIcon", payload);
-    },
-  },
-};
+<script setup>
+const props = defineProps({
+  selectedIcon: { type: Object, default: null },
+})
+
+const emit = defineEmits(['setIcon'])
+
+const store = useFavoritesStore()
+
+const icons = computed(() => store.favoritesList)
+
+function setIcon(payload) {
+  emit('setIcon', payload)
+}
 </script>

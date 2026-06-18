@@ -23,7 +23,7 @@
             class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
           >
             <h2 class="font-bold">{{ article.title }}</h2>
-            <p>by {{ article.author?.name || article.author.email }}</p>
+            <p>by {{ article.author?.name || article.author?.email }}</p>
             <p class="font-bold text-gray-600 text-sm">
               {{ article.description }}
             </p>
@@ -45,21 +45,11 @@
   </div>
 </template>
 
-<script>
-import Header from "~/components/Header";
+<script setup>
+const config = useRuntimeConfig()
+const api = config.public.api
 
-export default {
-  components: { Header },
-  data() {
-    return {
-      articles: [],
-      api: process.env.api
-    }
-  },
-  async mounted() {
-    this.articles = await this.$axios.$get('/api/blog')
-  }
-};
+const { data: articles } = await useFetch('/api/blog')
 </script>
 
 <style class="postcss">

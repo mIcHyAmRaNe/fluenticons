@@ -1,18 +1,11 @@
 <template>
   <div>
-    {{ $store.state.auth.user?.email }}
     <div
-      v-if="
-        $store.state.auth.user?.email !== 'milos@fluenticons.co' &&
-        $store.state.auth.user?.email !== 'colton@fluenticons.co'
-      "
+      v-if="!isAdmin"
     ></div>
     <div
       class="m-8"
-      v-if="
-        $store.state.auth.user?.email === 'milos@fluenticons.co' ||
-        $store.state.auth.user?.email === 'colton@fluenticons.co'
-      "
+      v-if="isAdmin"
     >
       <Header />
 
@@ -143,62 +136,68 @@
   </div>
 </template>
 
-<script>
-import Header from "~/components/Header";
+<script setup>
+const route = useRoute()
+const { user } = useUserSession()
+const config = useRuntimeConfig()
+const api = config.public.api
 
-export default {
-  components: { Header },
-  data() {
-    return {
-      id: "",
-      title: "",
-      description: "",
-      img: "",
-      content: "",
-      view: null,
-    };
-  },
-  async mounted() {
-    console.log(this.$store.state.auth);
-    const article = await this.$axios.$get(
-      "/api/blog/" + this.$route.params.slug
-    );
-    this.id = article._id;
-    this.title = article.title;
-    this.description = article.description;
-    this.view = process.env.api + article.img;
-    this.content = article.content;
-  },
-  methods: {
-    async submitForm() {
-      const formData = new FormData();
-      formData.append("id", this.id);
-      formData.append("title", this.title);
-      formData.append("content", this.content);
-      formData.append("description", this.description);
-      if (this.img) formData.append("img", this.img);
-      const response = await this.$axios.$post(`/api/blog`, formData);
-      if (response.success) {
-        window.location.href = "/blog";
-      }
-    },
-    async handleRemove() {
-      const response = await this.$axios.$delete(
-        `/api/blog/` + this.$route.params.slug
-      );
-      if (response.success) {
-        window.location.href = "/blog";
-      }
-    },
-    handleFile(e) {
-      if (!e.target.files?.[0]) return;
-      let file = e.target.files[0];
-      this.img = file;
-      this.view = URL.createObjectURL(file);
-      e.target.value = "";
-    },
-  },
-};
+const id = ref('')
+const title = ref('')
+const description = ref('')
+const img = ref('')
+const content = ref('')
+const view = ref(null)
+
+const isAdmin = computed(() => {
+  const email = user.value?.email
+  return email === 'milos@fluenticons.co' || email === 'colton@fluenticons.co'
+})
+
+const { data: article } = await useFetch(`/api/blog/${route.params.slug}`, {
+  immediate: true,
+})
+
+if (article.value) {
+  id.value = article.value._id
+  title.value = article.value.title
+  description.value = article.value.description
+  view.value = api + article.value.img
+  content.value = article.value.content
+}
+
+async function submitForm() {
+  const formData = new FormData()
+  formData.append('id', id.value)
+  formData.append('title', title.value)
+  formData.append('content', content.value)
+  formData.append('description', description.value)
+  if (img.value) formData.append('img', img.value)
+  const response = await $fetch('/api/blog', {
+    method: 'POST',
+    body: formData,
+  })
+  if (response.success) {
+    window.location.href = '/blog'
+  }
+}
+
+async function handleRemove() {
+  const response = await $fetch(`/api/blog/${route.params.slug}`, {
+    method: 'DELETE',
+  })
+  if (response.success) {
+    window.location.href = '/blog'
+  }
+}
+
+function handleFile(e) {
+  if (!e.target.files?.[0]) return
+  const file = e.target.files[0]
+  img.value = file
+  view.value = URL.createObjectURL(file)
+  e.target.value = ''
+}
 </script>
 
 <style class="postcss">

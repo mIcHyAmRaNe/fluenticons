@@ -1,9 +1,10 @@
 <template>
-  <div class="p-4 text-center ">
+  <div class="p-4 text-center">
     <a
-      href="https://www.buymeacoffee.com/COLTONGRIFC"
+      href="https://www.buymeacoffee.com/michyamrane"
       target="_blank"
       rel="noopener"
+      class="cursor-pointer hover:opacity-90 transition-opacity duration-200"
     >
       <IconThumbsUp class="h-12 w-12 mx-auto" />
       <p class="font-semibold">Buy me a coffee</p>

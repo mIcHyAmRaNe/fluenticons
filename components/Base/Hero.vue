@@ -1,7 +1,8 @@
 <template>
   <header class="py-[71.5px] px-8 relative">
     <div
-      class="absolute inset-0 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] index_beams bg-[url('/gradient-bg-white.jpg')] dark:bg-[url('/gradient-bg-dark.jpg')]"
+      class="absolute inset-0 bg-bottom bg-no-repeat index_beams bg-[url('/gradient-bg-white.jpg')] dark:bg-[url('/gradient-bg-dark.jpg')]"
+      :style="{ backgroundColor: 'var(--color-hero-bg)' }"
     ></div>
     <div
       class="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom bg-squares-dark dark-webkit-mask"
@@ -20,16 +21,26 @@
                 class="underline"
                 >Colton Griffith</a
               >
+              <span class="text-sm">
+              a bit improved by
+              <a
+                href="https://github.com/mIcHyAmRaNe"
+                target="_blank"
+                rel="noopener"
+                class="underline"
+                >mIcHyAmRaNe</a
+              >
+              </span>
             </p>
             <p class="text-xs mb-8">
               NOT AFFILIATED WITH MICROSOFT, IN ANY WAY
             </p>
-            <div class="flex-space-x-4">
+            <div class="flex flex-wrap gap-3">
               <a
-                href="https://github.com/coltongriffith/fluenticons"
+                href="https://github.com/mIcHyAmRaNe/fluenticons"
                 target="_blank"
                 rel="noopener"
-                class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md bg-gradient-to-b from-white dark:from-slate-700 to-gray-200 dark:to-slate-900 transition ease-in-out duration-150 ring-1 ring-gray-900/10 dark:ring-gray-200/20 relative border-transparent text-gray-700 dark:text-slate-100"
+                class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md bg-gradient-to-b from-white dark:from-slate-700 to-gray-200 dark:to-slate-900 transition ease-in-out duration-150 ring-1 ring-gray-900/10 dark:ring-gray-200/20 relative border-transparent text-gray-700 dark:text-slate-100 cursor-pointer hover:opacity-90 transition-opacity duration-200"
               >
                 <svg width="24" height="24" fill="currentColor" class="mr-3">
                   <path
@@ -40,9 +51,17 @@
                 </svg>
                 <p>Star us on Github</p></a
               >
+              <a
+                href="https://github.com/coltongriffith/fluenticons"
+                target="_blank"
+                rel="noopener"
+                class="hero-link gap-2"
+              >
+                <IconGithub class="h-4 w-4" />
+                <p>Original project</p>
+              </a>
             </div>
           </div>
-          <base-hero-sponsors />
         </div>
       </div>
     </div>

@@ -16,98 +16,96 @@
           type="text"
           class="focus:outline-none bg-transparent z-10 h-full rounded-l-full px-6 text-sm"
           placeholder="Search (Press / to focus)"
-          ref="search"
+          ref="searchRef"
           @input="search"
           autocomplete="new-password"
         />
         <button
-          class="h-10 w-10 flex-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 z-20 focus:outline-none focus:bg-gray-200"
-          @click="$refs.search.focus()"
+          class="h-10 w-10 flex-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 z-20 focus:outline-none focus:bg-gray-200 dark:focus:bg-gray-700 cursor-pointer transition-colors duration-200"
+          @click="searchRef?.focus()"
           aria-label="Search"
         >
           <FluentIconFilledSearch class="text-gray-500 h-5 w-5" />
         </button>
       </div>
-      <nuxt-link
-        :to="altIcons.path"
-        class="navbar-btn"
-        :aria-label="`${altIcons.name} Icons`"
-      >
-        <FluentIconFilledPositionBackward class="h-5 w-5" />
-        <p class="text-sm">{{ altIcons.name }} Icons</p>
-      </nuxt-link>
-      <button @click="toggleDarkMode" class="navbar-btn" aria-label="Dark Mode">
-        <FluentIconOutlinedWeatherSunny
-          v-if="$colorMode.value === 'dark'"
-          class="h-5 w-5"
-        />
-        <FluentIconOutlinedWeatherMoon v-else class="h-5 w-5" />
-        <p class="text-sm">
-          {{ $colorMode.value === "dark" ? "Light" : "Dark" }} Mode
-        </p>
-      </button>
-      <nuxt-link to="/favorites" class="navbar-btn" aria-label="Favorites">
-        <FluentIconOutlinedHeart class="h-5 w-5" />
-        <p class="text-sm">Favorites</p>
-      </nuxt-link>
+      <div class="flex rounded-full bg-gray-100 dark:bg-gray-800 p-1">
+        <NuxtLink
+          to="/outlined"
+          class="tab-btn"
+          :class="{ 'tab-btn-active': route.path === '/outlined' }"
+        >
+          Outlined
+        </NuxtLink>
+        <NuxtLink
+          to="/"
+          class="tab-btn"
+          :class="{ 'tab-btn-active': route.path === '/' }"
+        >
+          Filled
+        </NuxtLink>
+        <NuxtLink
+          to="/favorites"
+          class="tab-btn"
+          :class="{ 'tab-btn-active': route.path === '/favorites' }"
+        >
+          Favorites
+        </NuxtLink>
+      </div>
+      <ClientOnly>
+        <button
+          @click="toggleDarkMode"
+          class="navbar-btn cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+          aria-label="Dark Mode"
+        >
+          <FluentIconOutlinedWeatherSunny
+            v-if="colorMode.value === 'dark'"
+            class="h-5 w-5"
+          />
+          <FluentIconOutlinedWeatherMoon v-else class="h-5 w-5" />
+          <p class="text-sm">
+            {{ colorMode.value === "dark" ? "Light" : "Dark" }} Mode
+          </p>
+        </button>
+      </ClientOnly>
     </div>
     <base-search-focus @keyup="focusSearch" />
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      query: null,
-      debounce: null,
-    };
-  },
-  computed: {
-    isDarkMode() {
-      return this.$colorMode.preference === "dark" ? true : false;
-    },
-    altIcons() {
-      if (this.$route.path === "/outlined") {
-        return {
-          name: "Filled",
-          path: "/",
-        };
-      } else {
-        return {
-          name: "Outlined",
-          path: "/outlined",
-        };
-      }
-    },
-    page() {
-      switch (this.$route.path) {
-        case "/outlined":
-          return { title: "Outlined", subtitle: "2 px stroked" };
-        case "/favorites":
-          return { title: "Favorites" };
-        default:
-          return { title: "Filled", subtitle: "2 px filled" };
-      }
-    },
-  },
-  methods: {
-    search(e) {
-      this.query = e.target.value;
-      clearTimeout(this.debounce);
-      this.debounce = setTimeout(() => {
-        this.$emit("input", e.target.value);
-      }, 600);
-    },
-    focusSearch(e) {
-      if (e.key === "/") {
-        this.$refs.search.focus();
-      }
-    },
-    toggleDarkMode() {
-      this.$colorMode.preference =
-        this.$colorMode.value == "light" ? "dark" : "light";
-    },
-  },
-};
+<script setup>
+const route = useRoute();
+const colorMode = useColorMode();
+const props = defineProps({ modelValue: { type: String, default: "" } });
+const emit = defineEmits(["update:modelValue"]);
+
+const searchRef = ref(null);
+let debounce = null;
+
+const page = computed(() => {
+  switch (route.path) {
+    case "/outlined":
+      return { title: "Outlined", subtitle: "2 px stroked" };
+    case "/favorites":
+      return { title: "Favorites" };
+    default:
+      return { title: "Filled", subtitle: "2 px filled" };
+  }
+});
+
+function search(e) {
+  clearTimeout(debounce);
+  debounce = setTimeout(() => {
+    emit("update:modelValue", e.target.value);
+  }, 600);
+}
+
+function focusSearch(e) {
+  if (e.key === "/") {
+    searchRef.value?.focus();
+  }
+}
+
+function toggleDarkMode() {
+  colorMode.preference = colorMode.value === "light" ? "dark" : "light";
+}
 </script>

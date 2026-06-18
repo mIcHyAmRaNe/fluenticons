@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="bg-red-100 border-t border-b border-red-500 text-red-700 px-4 py-3 mb-4" role="alert" v-if="error.request">
+    <div
+      class="bg-red-100 border-t border-b border-red-500 text-red-700 px-4 py-3 mb-4"
+      role="alert"
+      v-if="error.request"
+    >
       <p class="font-bold">Registeration was failed!</p>
       <p class="text-sm">{{ error.request }}</p>
     </div>
@@ -8,7 +12,7 @@
     <p class="text-gray-400 text-sm mb-4 font-semibold">
       Start now and manage tabs, bookmakrs, your browser history, perform all sorts of actions and more.
     </p>
-    <SocialLogin />
+    <AuthSocialLogin />
     <div class="relative flex py-5 items-center">
       <div class="flex-grow border-t border-gray-400"></div>
       <span class="flex-shrink mx-4 text-gray-400">OR</span>
@@ -62,65 +66,59 @@
         </div>
       </div>
     </div>
-    <button @click="register" class="font-semibold border text-center py-2 px-4 bg-gray-600 hover:bg-gray-700 text-white border-gray-600 hover:border-gray-700 rounded w-full mt-6">
+    <button
+      @click="register"
+      class="font-semibold border text-center py-2 px-4 bg-gray-600 hover:bg-gray-700 text-white border-gray-600 hover:border-gray-700 rounded w-full mt-6"
+    >
       Join in with Email
     </button>
     <div class="text-center mt-4">
       <span class="text-gray-800 mt-4">Do you have an account?</span>
-      <span class="text-blue-700 hover:text-blue-900 ml-2 cursor-pointer" @click="login">
+      <span
+        class="text-blue-700 hover:text-blue-900 ml-2 cursor-pointer"
+        @click="$emit('login')"
+      >
         Sign in
       </span>
     </div>
   </div>
 </template>
 
-<script>
-import SocialLogin from './SocialLogin'
-export default {
-  components: {
-    SocialLogin
-  },
-  data() {
-    return {
-      email: '',
-      password: '',
-      confirmPassword: '',
-      error: {},
+<script setup>
+const emit = defineEmits(['login'])
+const email = ref('')
+const password = ref('')
+const confirmPassword = ref('')
+const error = ref({})
+
+async function register() {
+  if (!email.value || !password.value) {
+    error.value = {
+      email: !email.value && 'Email is required' || '',
+      password: !password.value && 'Password is required' || '',
     }
-  },
-  methods: {
-    register() {
-      if (!this.email || !this.password) {
-        this.error = {
-          email: !this.email && 'Email is required' || '',
-          password: !this.password && 'Password is required' || ''
-        }
-        return
-      }
-      if (this.password !== this.confirmPassword) {
-        this.error = {
-          ...this.error,
-          confirmPassword: 'Password doesn\'t match'
-        }
-        return
-      }
-      this.$axios.$post("/api/auth/register", {
-        email: this.email,
-        password: this.password
-      }).then(res => {
-        if (res.success) this.login()
-        else this.error = {
-          request: res.message
-        }
-      }).catch(err => {
-        console.log(err)
-        this.error = {
-          request: 'Please try again later!'
-        }
-      });
-    },
-    login() {
-      this.$emit("login")
+    return
+  }
+  if (password.value !== confirmPassword.value) {
+    error.value = {
+      ...error.value,
+      confirmPassword: "Password doesn't match",
+    }
+    return
+  }
+  try {
+    const res = await $fetch('/api/auth/register', {
+      method: 'POST',
+      body: { email: email.value, password: password.value },
+    })
+    if (res.success) {
+      emit('login')
+    } else {
+      error.value = { request: res.message }
+    }
+  } catch (err) {
+    error.value = {
+      request: err.data?.message || 'Please try again later!',
     }
   }
 }

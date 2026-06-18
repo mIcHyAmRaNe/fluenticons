@@ -1,12 +1,18 @@
 <template>
   <div>
-    <div class="bg-red-100 border-t border-b border-red-500 text-red-700 px-4 py-3 mb-4" role="alert" v-if="error.request">
+    <div
+      class="bg-red-100 border-t border-b border-red-500 text-red-700 px-4 py-3 mb-4"
+      role="alert"
+      v-if="error.request"
+    >
       <p class="font-bold">Login was failed!</p>
       <p class="text-sm">{{ error.request }}</p>
     </div>
     <h1 class="font-semibold text-4xl mb-3">Log in or sign up to download</h1>
-    <p class="text-gray-400 text-sm mb-4 font-semibold">Log in with your data that you enterd during your registration.</p>
-    <SocialLogin />
+    <p class="text-gray-400 text-sm mb-4 font-semibold">
+      Log in with your data that you enterd during your registration.
+    </p>
+    <AuthSocialLogin />
     <div class="relative flex py-5 items-center">
       <div class="flex-grow border-t border-gray-400"></div>
       <span class="flex-shrink mx-4 text-gray-400">OR</span>
@@ -44,67 +50,51 @@
         </div>
       </div>
     </div>
-    <button @click="login" class="font-semibold border text-center py-2 px-4 bg-gray-600 hover:bg-gray-700 text-white border-gray-600 hover:border-gray-700 rounded w-full mt-6">
+    <button
+      @click="login"
+      class="font-semibold border text-center py-2 px-4 bg-gray-600 hover:bg-gray-700 text-white border-gray-600 hover:border-gray-700 rounded w-full mt-6"
+    >
       Log in with Email
     </button>
     <div class="text-center mt-4">
       <span class="text-gray-800 mt-4">Don't have an account?</span>
-      <span class="text-blue-700 hover:text-blue-900 ml-2 cursor-pointer" @click="signup">
+      <span
+        class="text-blue-700 hover:text-blue-900 ml-2 cursor-pointer"
+        @click="$emit('signup')"
+      >
         Sign Up
       </span>
     </div>
   </div>
 </template>
 
-<script>
-import SocialLogin from './SocialLogin'
-export default {
-  components: {
-    SocialLogin
-  },
-  data() {
-    return {
-      email: '',
-      password: '',
-      error: {},
+<script setup>
+const emit = defineEmits(['close', 'signup'])
+const email = ref('')
+const password = ref('')
+const error = ref({})
+
+const { fetch: refreshSession } = useUserSession()
+
+async function login() {
+  if (!email.value || !password.value) {
+    error.value = {
+      email: !email.value && 'Email is required' || '',
+      password: !password.value && 'Password is required' || '',
     }
-  },
-  methods: {
-    async login() {
-      if (!this.email || !this.password) {
-        this.error = {
-          email: !this.email && 'Email is required' || '',
-          password: !this.password && 'Password is required' || ''
-        }
-        return
-      }
-      try {
-        const response = await this.$auth.loginWith("local", {
-          data: {
-            email: this.email,
-            password: this.password
-          }
-        });
-        if (response.data.success) {
-          await this.$auth.setUserToken(response.data.token)
-          this.$emit("close")
-        } else {
-          this.error = {
-            request: response.data.message
-          }
-          console.log('error', this.error)
-        }
-      } catch (err) {
-        console.log(err)
-        this.error = {
-          request: 'Please try again later!'
-        }
-      }
-      
-    },
-    signup() {
-      this.$emit("signup")
-    },
+    return
+  }
+  try {
+    await $fetch('/api/auth/login', {
+      method: 'POST',
+      body: { email: email.value, password: password.value },
+    })
+    await refreshSession()
+    emit('close')
+  } catch (err) {
+    error.value = {
+      request: err.data?.message || 'Please try again later!',
+    }
   }
 }
 </script>

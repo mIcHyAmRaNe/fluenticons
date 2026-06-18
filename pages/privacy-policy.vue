@@ -5,7 +5,7 @@
       <h1>Privacy Policy</h1>
       <p>
         Last updated:
-        <!-- -->22 March 2022
+        <!-- -->18 June 2026
       </p>
       <p>
         This Privacy Policy describes Our policies and procedures on the
@@ -40,8 +40,7 @@
             <strong>Company</strong> (referred to as either &#x27;the
             Company&#x27;, &#x27;We&#x27;, &#x27;Us&#x27; or &#x27;Our&#x27; in
             this Agreement) refers to
-            <!-- -->Fluenticons<!-- -->,
-            <!-- -->Bangalore City<!-- -->.
+            <!-- -->Fluenticons<!-- -->.
           </p>
         </li>
         <li>
@@ -55,8 +54,7 @@
         <li>
           <p>
             <strong>Country</strong> refers to:
-            <!-- -->Karnataka<!-- -->,
-            <!-- -->India
+            <!-- -->France
           </p>
         </li>
         <li>
@@ -103,10 +101,10 @@
             <strong>Website</strong> refers to
             <!-- -->Fluenticons<!-- -->, accessible from<!-- -->
             <a
-              href="https://fluenticons.co"
+              href="https://michyamrane.github.io"
               rel="external nofollow noopener noreferrer"
               target="_blank"
-              >https://fluenticons.co</a
+              >https://michyamrane.github.io</a
             >
           </p>
         </li>
@@ -294,9 +292,26 @@
       <ul>
         <li>
           By email:
-          <!-- -->info@fluenticons.co
+          <!-- -->custard-jam-dust@duck.com
         </li>
       </ul>
+      <h2>License</h2>
+      <p>
+        Fluent Icons are open-source icons by Microsoft. This project is a
+        community-maintained viewer and is not affiliated with Microsoft.
+      </p>
+      <p>
+        The source code for this website is available under the
+        <strong>MIT License</strong>. See the
+        <a
+          href="https://github.com/mIcHyAmRaNe/fluenticons"
+          target="_blank"
+          rel="noopener"
+          class="underline"
+          >GitHub repository</a
+        >
+        for details.
+      </p>
     </section>
   </main>
 </template>
