@@ -1,12 +1,7 @@
 <template>
-  <div>
-    <div
-      v-if="!isAdmin"
-    ></div>
-    <div
-      class="m-8"
-      v-if="isAdmin"
-    >
+  <div
+    class="m-8"
+  >
       <Header />
 
       <h1 class="font-bold text-4xl pt-8">Blog Post</h1>
@@ -132,15 +127,11 @@
           </div>
         </form>
       </div>
-    </div>
   </div>
 </template>
 
 <script setup>
 const route = useRoute()
-const { user } = useUserSession()
-const config = useRuntimeConfig()
-const api = config.public.api
 
 const id = ref('')
 const title = ref('')
@@ -148,11 +139,6 @@ const description = ref('')
 const img = ref('')
 const content = ref('')
 const view = ref(null)
-
-const isAdmin = computed(() => {
-  const email = user.value?.email
-  return email === 'milos@fluenticons.co' || email === 'colton@fluenticons.co'
-})
 
 const { data: article } = await useFetch(`/api/blog/${route.params.slug}`, {
   immediate: true,
@@ -162,7 +148,7 @@ if (article.value) {
   id.value = article.value._id
   title.value = article.value.title
   description.value = article.value.description
-  view.value = api + article.value.img
+  view.value = article.value.img
   content.value = article.value.content
 }
 

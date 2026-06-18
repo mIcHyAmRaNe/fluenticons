@@ -60,7 +60,6 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
     "@pinia/nuxt",
     "@vueuse/nuxt",
-    "nuxt-auth-utils",
     "@nuxt/scripts",
   ],
 
@@ -97,6 +96,7 @@ export default defineNuxtConfig({
           manualChunks: {
             // Separate vendor chunk for large dependencies
             vendor: ["vue", "vue-router", "pinia"],
+            icons: ["./assets/icons/**"],
           },
           // Enable chunk splitting for better caching
           inlineDynamicImports: false,

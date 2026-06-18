@@ -192,7 +192,6 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["login"]);
 
 const colorMode = useColorMode();
 const store = useFavoritesStore();

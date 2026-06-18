@@ -9,19 +9,12 @@
         :selectedIcon="selectedIcon"
       />
     </section>
-    <IconEditor :icon="selectedIcon" @login="showModal = 'login'" />
-    <modal v-show="showModal == 'login'" @close="showModal = ''">
-      <AuthLogin @signup="showModal = 'register'" @close="showModal = ''" />
-    </modal>
-    <modal v-show="showModal == 'register'" @close="showModal = ''">
-      <AuthRegister @login="showModal = 'login'" />
-    </modal>
+    <IconEditor :icon="selectedIcon" />
   </main>
 </template>
 
 <script setup>
 const route = useRoute()
-const showModal = ref('')
 const searchQuery = ref('')
 const elementsToShow = ref(48)
 const selectedIcon = ref(initialIcon())
