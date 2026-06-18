@@ -10,6 +10,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@floating-ui/vue": "^2.0.0",
     "@nuxt/content": "^3.14.0",
     "@nuxt/scripts": "^1.2.1",
     "@nuxtjs/color-mode": "^4.0.1",
@@ -22,7 +23,6 @@
     "@vueuse/nuxt": "^14.3.0",
     "better-sqlite3": "^12.11.1",
     "file-saver": "^2.0.5",
-    "floating-vue": "^5.2.2",
     "jszip": "^3.10.1",
     "nuxt": "^4.4.8",
     "nuxt-auth-utils": "^0.5.29",

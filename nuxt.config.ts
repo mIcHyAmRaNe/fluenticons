@@ -80,7 +80,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ["floating-vue", "jszip", "vue-gtag", "vue-sonner"],
+      include: ["@floating-ui/vue", "jszip", "vue-gtag", "vue-sonner"],
     },
     // Performance optimizations
     build: {
