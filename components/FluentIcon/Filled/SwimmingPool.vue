@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M6 6a1 1 0 0 1 2 0v6.026c.632.06 1.3.192 2 .415V11h6v3.485a6.3 6.3 0 0 0 2-.355V6a3 3 0 0 0-6 0 1 1 0 1 0 2 0 1 1 0 1 1 2 0v3h-6V6a3 3 0 0 0-6 0 1 1 0 0 0 2 0m.592 9.025c-1.024.126-1.7.547-1.986.766a1 1 0 0 1-1.212-1.592c.492-.374 1.493-.979 2.953-1.16 1.475-.181 3.336.08 5.513 1.317 3.788 2.154 6.836.653 7.63.183a1 1 0 0 1 1.02 1.72c-1.077.638-4.949 2.502-9.639-.164-1.836-1.044-3.268-1.195-4.279-1.07M4.606 19.79c.287-.219.962-.64 1.986-.766 1.01-.125 2.443.026 4.28 1.07 4.69 2.666 8.56.802 9.638.165a1 1 0 1 0-1.02-1.721c-.794.47-3.842 1.971-7.63-.183-2.177-1.237-4.038-1.498-5.513-1.316-1.46.18-2.46.785-2.953 1.16a1 1 0 0 0 1.212 1.59" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledSwimmingPool',
+  mixins: [icon]
+};
+</script>

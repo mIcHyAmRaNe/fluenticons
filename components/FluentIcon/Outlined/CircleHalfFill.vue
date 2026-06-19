@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M2.028 11.25C2.41 6.077 6.729 2 12 2c5.27 0 9.589 4.077 9.972 9.25H22V12c0 5.523-4.477 10-10 10S2 17.523 2 12v-.75h.028ZM12 3.5a8.5 8.5 0 0 0-8.467 7.75h16.934A8.5 8.5 0 0 0 12 3.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M3.5 12a8.5 8.5 0 0 1 17 0zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedCircleHalfFill',
-    mixins: [icon]
+  name: 'FluentIconOutlinedCircleHalfFill',
+  mixins: [icon]
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,16 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M7.75 15.5a.75.75 0 0 1-.75-.75v-5.5a.75.75 0 0 1 1.5 0v5.5a.75.75 0 0 1-.75.75ZM16.25 15.5a.75.75 0 0 1-.75-.75v-5.5a.75.75 0 0 1 1.5 0v5.5a.75.75 0 0 1-.75.75Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M4 4.5v15A2.5 2.5 0 0 0 6.5 22h11a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 17.5 2h-11A2.5 2.5 0 0 0 4 4.5Zm13-1h.5a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H17v-2.75a.75.75 0 0 0-1.5 0v2.75h-7v-2.75a.75.75 0 0 0-1.5 0v2.75h-.5a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1H7v2.75a.75.75 0 0 0 1.5 0V3.5h7v2.75a.75.75 0 0 0 1.5 0V3.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M4 4.25A2.25 2.25 0 0 1 6.25 2h11.5A2.25 2.25 0 0 1 20 4.25v15.5A2.25 2.25 0 0 1 17.75 22H6.25A2.25 2.25 0 0 1 4 19.75zM17 20.5h.75a.75.75 0 0 0 .75-.75V4.25a.75.75 0 0 0-.75-.75H17v2.75a.75.75 0 0 1-1.5 0V3.5h-7v2.75a.75.75 0 0 1-1.5 0V3.5h-.75a.75.75 0 0 0-.75.75v15.5c0 .414.336.75.75.75H7v-2.75a.75.75 0 0 1 1.5 0v2.75h7v-2.75a.75.75 0 0 1 1.5 0zm-9.25-12a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 .75-.75m9.25.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedDocumentMargins',
-    mixins: [icon]
+  name: 'FluentIconOutlinedDocumentMargins',
+  mixins: [icon]
 };
 </script>

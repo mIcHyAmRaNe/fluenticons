@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M6.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11M20 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-7.498c.198-.474.341-.977.422-1.5H20a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5H7.5v5.576A6.5 6.5 0 0 0 6 11.02V5.5H4a.5.5 0 0 0-.5.5v5.732A6.5 6.5 0 0 0 2 12.81V6a2 2 0 0 1 2-2zM3.495 17a.5.5 0 0 0 0 1h6.002a.5.5 0 0 0 0-1zM16 7a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm-4 1.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5V9a.5.5 0 0 0-.5-.5z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconOutlinedAlbumSubtract',
+  mixins: [icon]
+};
+</script>

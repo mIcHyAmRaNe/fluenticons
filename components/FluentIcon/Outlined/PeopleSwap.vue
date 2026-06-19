@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,18 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M14.937 15.5A2.001 2.001 0 0 0 13 14l-9-.001-.15.005A2.001 2.001 0 0 0 2 16V17.5l.005.23C2.165 21.044 5.778 22 8.5 22c.855 0 1.798-.094 2.694-.326l-.681-.682a1.75 1.75 0 0 1-.401-.622 9.718 9.718 0 0 1-1.295.125L8.5 20.5l-.317-.005c-1.263-.039-2.44-.308-3.266-.753C3.95 19.222 3.5 18.509 3.5 17.5v-1.501l.01-.101a.506.506 0 0 1 .136-.253.51.51 0 0 1 .253-.136l.101-.01 10.937.001Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M14.78 21.723a.75.75 0 0 1-1.06 1.06l-2.5-2.498a.75.75 0 0 1 0-1.061l2.5-2.501a.75.75 0 1 1 1.06 1.06l-1.22 1.22h6.878l-1.219-1.22a.75.75 0 1 1 1.061-1.06l2.5 2.502a.75.75 0 0 1 0 1.06l-2.5 2.499a.75.75 0 1 1-1.06-1.061l1.22-1.22h-6.88l1.22 1.22Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M22 17v.03l-1.012-1.014a1.742 1.742 0 0 0-.71-.432.497.497 0 0 0-.188-.076L20 15.5h-4.051a2.957 2.957 0 0 0-.595-1.34L15.22 14H20c1.054 0 1.918.816 1.994 1.85L22 16v1ZM13 7.5a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Zm-7.5 0c0-1.654 1.346-3 3-3s3 1.346 3 3-1.346 3-3 3-3-1.346-3-3ZM21 8.5a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0Zm-5.5 0c0-1.103.897-2 2-2s2 .897 2 2-.897 2-2 2-2-.897-2-2Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0m13-.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M14 9a3 3 0 1 1 6 0 3 3 0 0 1-6 0m-1.223 5.248A2.24 2.24 0 0 0 11.75 14h-7.5A2.25 2.25 0 0 0 2 16.25v.278a2 2 0 0 0 .014.208 4.5 4.5 0 0 0 .778 2.07C3.61 19.974 5.172 21 8 21c1.608 0 2.807-.332 3.692-.833l-1.117-1.117c-.618.267-1.45.45-2.575.45-2.422 0-3.486-.85-3.98-1.555a3 3 0 0 1-.513-1.358l-.007-.08v-.257a.75.75 0 0 1 .75-.75h7.275zm7.504.472a.75.75 0 0 0-1.06 1.06L20.438 17H13.56l1.219-1.22a.75.75 0 0 0-1.06-1.06l-2.5 2.5a.75.75 0 0 0 0 1.06l2.5 2.5a.75.75 0 0 0 1.06-1.06l-1.22-1.22h6.88l-1.22 1.22a.75.75 0 0 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedPeopleSwap',
-    mixins: [icon]
+  name: 'FluentIconOutlinedPeopleSwap',
+  mixins: [icon]
 };
 </script>

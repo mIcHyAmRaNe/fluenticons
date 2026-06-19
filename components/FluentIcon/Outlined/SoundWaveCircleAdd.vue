@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M17.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11M12 2c5.523 0 10 4.477 10 10q-.002.393-.033.78a6.5 6.5 0 0 0-1.474-1.05 8.5 8.5 0 1 0-8.764 8.764c.281.54.636 1.035 1.05 1.473q-.386.032-.779.033C6.477 22 2 17.523 2 12S6.477 2 12 2m5.5 11.999a.5.5 0 0 0-.5.5V17h-2.505a.5.5 0 0 0 0 1h2.506v2.504a.5.5 0 0 0 1 0V18h2.496a.5.5 0 0 0 0-1H18v-2.501a.5.5 0 0 0-.5-.5M10.25 8a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-1.5 0v-6.5a.75.75 0 0 1 .75-.75m-3 2a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 .75-.75m6-.5a.75.75 0 0 1 .75.75v1.774a6.5 6.5 0 0 0-1.5 1.323V10.25a.75.75 0 0 1 .75-.75m3-1.5a.75.75 0 0 1 .75.75v2.27q-.782.061-1.5.295V8.75a.75.75 0 0 1 .75-.75" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconOutlinedSoundWaveCircleAdd',
+  mixins: [icon]
+};
+</script>

@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M17.01 12.194a.713.713 0 0 1 .98 0c.652.651 1.907 1.686 3.45 1.899.307.042.56.285.56.589v2.838c0 3.816-3.58 5.2-4.353 5.456a.46.46 0 0 1-.293 0C16.578 22.72 13 21.336 13 17.52v-2.838c0-.304.253-.547.56-.59 1.543-.212 2.798-1.247 3.45-1.898M12.162 14c-.1.2-.161.43-.161.685v2.838c0 1.516.496 2.89 1.446 4.029q-1.535.45-3.45.449c-3.42 0-5.943-1.072-7.485-3.236A2.75 2.75 0 0 1 2 17.169v-.92A2.25 2.25 0 0 1 4.249 14zM9.996 2.005a5 5 0 1 1 0 10 5 5 0 0 1 0-10" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledPersonShield',
+  mixins: [icon]
+};
+</script>

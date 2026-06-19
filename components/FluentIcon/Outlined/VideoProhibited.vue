@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M13.75 5A3.25 3.25 0 0 1 17 8.25v.173l3.864-2.318A.75.75 0 0 1 22 6.748v6.062a6.518 6.518 0 0 0-1.5-1.078V8.073L17 10.174v.845c-.52.04-1.022.14-1.5.294V8.25a1.75 1.75 0 0 0-1.75-1.75h-8.5A1.75 1.75 0 0 0 3.5 8.25v8.5c0 .966.784 1.75 1.75 1.75h5.826c.081.523.224 1.026.422 1.5H5.25A3.25 3.25 0 0 1 2 16.75v-8.5A3.25 3.25 0 0 1 5.25 5h8.5ZM23 17.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Zm-9.5 0c0 .834.255 1.608.691 2.248l5.557-5.557A4 4 0 0 0 13.5 17.5Zm4 4a4 4 0 0 0 3.309-6.248l-5.557 5.557c.64.436 1.414.691 2.248.691Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M6.5 11a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11m-2.248 8.809a4 4 0 0 0 5.557-5.557zM12.75 5A3.25 3.25 0 0 1 16 8.25v.312l3.258-2.25c1.16-.801 2.744.03 2.744 1.44v8.495c0 1.41-1.583 2.242-2.744 1.44L16 15.438v.313A3.25 3.25 0 0 1 12.75 19h-.249a6.5 6.5 0 0 0 .423-1.509A1.75 1.75 0 0 0 14.5 15.75v-7.5a1.75 1.75 0 0 0-1.75-1.75h-7.5A1.75 1.75 0 0 0 3.5 8.25v2.483A6.5 6.5 0 0 0 2 11.812V8.25A3.25 3.25 0 0 1 5.25 5zM6.5 12.5a4 4 0 0 0-3.309 6.248l5.557-5.557A4 4 0 0 0 6.5 12.5m14.002-4.748a.25.25 0 0 0-.393-.206L16 10.384v3.231l4.11 2.838a.25.25 0 0 0 .392-.206z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedVideoProhibited',
-    mixins: [icon]
+  name: 'FluentIconOutlinedVideoProhibited',
+  mixins: [icon]
 };
 </script>

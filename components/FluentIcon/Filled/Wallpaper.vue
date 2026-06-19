@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="m14.762 13.127.138.137 5.6 5.876v-5.391a.75.75 0 0 1 1.493-.102l.007.102v5.502a2.75 2.75 0 0 1-2.582 2.745l-.168.005h-5.5a.75.75 0 0 1-.102-1.493l.102-.007h5.284l-5.582-5.857a2 2 0 0 0-2.772-.12l-.124.12-5.578 5.857h5.272l.102.007a.75.75 0 0 1 0 1.486l-.102.007h-5.5l-.168-.005a2.75 2.75 0 0 1-2.577-2.57L2 19.25V13.75l.007-.102a.75.75 0 0 1 1.486 0l.007.102v5.404l5.607-5.888a4 4 0 0 1 5.655-.138ZM10.25 1.999a.75.75 0 0 1 .102 1.493l-.102.007h-5.5a1.25 1.25 0 0 0-1.244 1.122L3.5 4.75v5.502a.75.75 0 0 1-1.493.102L2 10.251V4.75a2.75 2.75 0 0 1 2.582-2.745l.168-.005h5.5Zm9 0 .168.005a2.75 2.75 0 0 1 2.577 2.57L22 4.75v5.502l-.007.102a.75.75 0 0 1-1.486 0l-.007-.102V4.75l-.006-.128a1.25 1.25 0 0 0-1.116-1.116L19.25 3.5h-5.5l-.102-.007a.75.75 0 0 1 0-1.486l.102-.007h5.5Zm-3.247 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M3 6.25A3.25 3.25 0 0 1 6.25 3H10a1 1 0 1 1 0 2H6.25C5.56 5 5 5.56 5 6.25V10a1 1 0 1 1-2 0zM13 4a1 1 0 0 1 1-1h3.75A3.25 3.25 0 0 1 21 6.25V10a1 1 0 1 1-2 0V6.25C19 5.56 18.44 5 17.75 5H14a1 1 0 0 1-1-1m-9 9a1 1 0 0 1 1 1v3.586l4.525-4.525a3.5 3.5 0 0 1 4.95 0L19 17.586V14a1 1 0 1 1 2 0v3.75A3.25 3.25 0 0 1 17.75 21H14a1 1 0 1 1 0-2h3.586l-4.525-4.525a1.5 1.5 0 0 0-2.122 0L6.414 19H10a1 1 0 1 1 0 2H6.25A3.25 3.25 0 0 1 3 17.75V14a1 1 0 0 1 1-1m13.5-4.25a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledWallpaper',
-    mixins: [icon]
+  name: 'FluentIconFilledWallpaper',
+  mixins: [icon]
 };
 </script>

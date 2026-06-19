@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,15 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M12.394 5.925 10.523 4.41A1.842 1.842 0 0 0 9.363 4C7.956 4 7.068 5.514 7.756 6.742l.382.682 3.463-.722c.056-.012.17-.06.294-.21.14-.17.308-.362.499-.567ZM3 20a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z" :fill="fill" :fill-opacity="opacity" />
-<path d="M21.547 6.83c-.945-1.084-2.617-2.5-4.855-2.327-.929.071-1.77.549-2.429 1.057a10.429 10.429 0 0 0-1.598 1.57c-.243.293-.546.486-.86.551l-4.663.972-.966-1.771A1.691 1.691 0 0 0 3 7.692v3.69a2.294 2.294 0 0 0 2.727 2.252l3.3-.635-.507 1.234a2.004 2.004 0 0 0 3.456 1.966l3.236-4.315 5.37-1.852a2.141 2.141 0 0 0 1.343-1.32 1.898 1.898 0 0 0-.378-1.883Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="m10.523 4.41 1.87 1.515c-.19.205-.357.398-.498.567-.124.15-.238.198-.294.21l-3.463.722-.382-.682C7.068 5.514 7.956 4 9.363 4c.422 0 .832.145 1.16.41m6.17.093c2.237-.173 3.909 1.243 4.854 2.326.489.56.587 1.268.378 1.883a2.14 2.14 0 0 1-1.342 1.32l-5.371 1.852-3.236 4.315a2.004 2.004 0 0 1-3.456-1.966L9.028 13l-3.301.635A2.294 2.294 0 0 1 3 11.382v-3.69a1.691 1.691 0 0 1 3.176-.81l.966 1.77 4.663-.97c.314-.066.617-.26.86-.551.37-.447.929-1.055 1.598-1.571.66-.508 1.5-.986 2.43-1.057M3.75 19.5a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledAirplaneTakeOff',
-    mixins: [icon]
+  name: 'FluentIconFilledAirplaneTakeOff',
+  mixins: [icon]
 };
 </script>

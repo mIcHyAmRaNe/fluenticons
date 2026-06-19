@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="m17.751 3 .185.005a3.25 3.25 0 0 1 3.06 3.06l.005.185v11.5l-.005.184A3.25 3.25 0 0 1 17.751 21H6.25a3.25 3.25 0 0 1-3.245-3.066L3 17.75V6.25a3.25 3.25 0 0 1 3.066-3.245L6.25 3h11.501ZM19.5 8H4.501L4.5 17.75a1.75 1.75 0 0 0 1.606 1.744l.144.006h11.501l.144-.006a1.75 1.75 0 0 0 1.6-1.593l.006-.151L19.5 8Zm-9.25 1.5a.75.75 0 0 1 .743.648l.007.102v7a.75.75 0 0 1-.648.743L10.25 18h-3.5a.75.75 0 0 1-.743-.648L6 17.25v-7a.75.75 0 0 1 .648-.743L6.75 9.5h3.5ZM9.5 11h-2v5.5h2V11Zm6.75 1.503a.75.75 0 0 1 .102 1.493l-.102.007h-3.496a.75.75 0 0 1-.101-1.493l.101-.007h3.496Zm1-3.003a.75.75 0 0 1 .102 1.493L17.25 11h-4.496a.75.75 0 0 1-.101-1.493l.101-.007h4.496Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M3 6.25A3.25 3.25 0 0 1 6.25 3h11.5A3.25 3.25 0 0 1 21 6.25v11.5A3.25 3.25 0 0 1 17.75 21H6.25A3.25 3.25 0 0 1 3 17.75zM6.25 4.5A1.75 1.75 0 0 0 4.5 6.25v.25h15v-.25a1.75 1.75 0 0 0-1.75-1.75zM4.5 17.75c0 .966.784 1.75 1.75 1.75h11.5a1.75 1.75 0 0 0 1.75-1.75V8h-15zM6.85 9.5h3.3c.47 0 .85.38.85.85v6.8c0 .47-.38.85-.85.85h-3.3a.85.85 0 0 1-.85-.85v-6.8c0-.47.38-.85.85-.85m.65 7h2V11h-2zm4.5-6.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75m.75 2.25a.75.75 0 0 0 0 1.5h3.5a.75.75 0 0 0 0-1.5z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedAppGeneric',
-    mixins: [icon]
+  name: 'FluentIconOutlinedAppGeneric',
+  mixins: [icon]
 };
 </script>

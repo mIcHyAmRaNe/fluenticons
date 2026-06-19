@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5a1.75 1.75 0 1 1 0 3.5H3.75A1.75 1.75 0 0 1 2 3.75ZM12 17.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm2.5-4a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM3 7h18v6a9 9 0 1 1-18 0V7Zm9 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5a1.75 1.75 0 1 1 0 3.5H3.75A1.75 1.75 0 0 1 2 3.75M12 17.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8m2.5-4a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0M3 7h18v6a9 9 0 1 1-18 0zm9 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledCameraDome',
-    mixins: [icon]
+  name: 'FluentIconFilledCameraDome',
+  mixins: [icon]
 };
 </script>

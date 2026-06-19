@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M6.237 3c.967 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 6.237 21h-2.5a1.75 1.75 0 0 1-1.75-1.75V4.75a1.75 1.75 0 0 1 1.607-1.743L3.737 3h2.5Zm14.026 0c.967 0 1.75.784 1.75 1.75v14.5a1.75 1.75 0 0 1-1.75 1.75h-2.5a1.75 1.75 0 0 1-1.75-1.75V4.75c0-.966.784-1.75 1.75-1.75h2.5Zm-7.026 0c.967 0 1.75.784 1.75 1.75v14.5a1.75 1.75 0 0 1-1.75 1.75h-2.5a1.75 1.75 0 0 1-1.75-1.75V4.75c0-.966.784-1.75 1.75-1.75h2.5Zm-7 1.5h-2.5l-.057.007a.25.25 0 0 0-.193.244v14.5c0 .138.112.25.25.25h2.5a.25.25 0 0 0 .25-.25V4.75a.25.25 0 0 0-.25-.25Zm14.026 0h-2.5a.25.25 0 0 0-.25.25v14.5c0 .139.112.25.25.25h2.5a.25.25 0 0 0 .25-.25V4.75a.25.25 0 0 0-.25-.25Zm-7.026 0h-2.5a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h2.5a.25.25 0 0 0 .25-.25V4.75a.25.25 0 0 0-.25-.25Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M4.5 21A2.5 2.5 0 0 1 2 18.5v-13A2.5 2.5 0 0 1 4.5 3h1A2.5 2.5 0 0 1 8 5.5v13A2.5 2.5 0 0 1 5.5 21zm-1-2.5a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-13a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1zm8 2.5A2.5 2.5 0 0 1 9 18.5v-13A2.5 2.5 0 0 1 11.5 3h1A2.5 2.5 0 0 1 15 5.5v13a2.5 2.5 0 0 1-2.5 2.5zm-1-2.5a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-13a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1zm5.5 0a2.5 2.5 0 0 0 2.5 2.5h1a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 19.5 3h-1A2.5 2.5 0 0 0 16 5.5zm2.5 1a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedColumnTriple',
-    mixins: [icon]
+  name: 'FluentIconOutlinedColumnTriple',
+  mixins: [icon]
 };
 </script>

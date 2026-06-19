@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M6.25 3A3.25 3.25 0 0 0 3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h4.794c.092-.482.323-.942.696-1.314l.186-.186H6.25a1.75 1.75 0 0 1-1.75-1.75V8.5h15v2.532q.258.03.512.085c.47.102.814.412.988.791V6.25A3.25 3.25 0 0 0 17.75 3zm13.88 9.51c0-.19-.115-.37-.331-.416a4.07 4.07 0 0 0-3.752 1.099 4.07 4.07 0 0 0-.87 4.47l-2.73 2.73a1.527 1.527 0 1 0 2.16 2.16l2.73-2.73a4.075 4.075 0 0 0 5.57-4.622c-.078-.353-.508-.44-.763-.185l-1.905 1.904a1.54 1.54 0 0 1-.739.41 1.526 1.526 0 0 1-1.42-2.57l1.904-1.904a.5.5 0 0 0 .146-.346M17.72 21l-.116-.03-.03.03z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledWindowWrench',
+  mixins: [icon]
+};
+</script>

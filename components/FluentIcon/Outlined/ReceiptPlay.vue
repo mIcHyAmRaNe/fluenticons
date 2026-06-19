@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M5 4.25A2.25 2.25 0 0 1 7.25 2h8.5A2.25 2.25 0 0 1 18 4.25V12h3.5v3.25a3.25 3.25 0 0 1-3.25 3.25h-5.326a6.554 6.554 0 0 0 .057-1.5H16.5V4.25a.75.75 0 0 0-.75-.75h-8.5a.75.75 0 0 0-.75.75V11a6.52 6.52 0 0 0-1.5.174V4.25ZM18 17h.25A1.75 1.75 0 0 0 20 15.25V13.5h-2V17Zm-3.75-2.5h-1.982A6.518 6.518 0 0 0 11.19 13h3.06a.75.75 0 0 1 0 1.5ZM8 6.75A.75.75 0 0 1 8.75 6h5.5a.75.75 0 0 1 0 1.5h-5.5A.75.75 0 0 1 8 6.75Zm0 3.5a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75ZM6.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11ZM5 14.96v5.08a.5.5 0 0 0 .787.41l3.628-2.54a.5.5 0 0 0 0-.82l-3.628-2.54a.5.5 0 0 0-.787.41Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M4 5.25A2.25 2.25 0 0 1 6.25 3h9.5A2.25 2.25 0 0 1 18 5.25V14h4v3.75A3.25 3.25 0 0 1 18.75 21h-6.772c.297-.463.536-.966.709-1.5H16.5V5.25a.75.75 0 0 0-.75-.75h-9.5a.75.75 0 0 0-.75.75v5.826a6.5 6.5 0 0 0-1.5.422zm9.75 7.25h-3.096a6.5 6.5 0 0 0-2.833-1.366A.75.75 0 0 1 8.25 11h5.5a.75.75 0 0 1 0 1.5m4.25 7h.75a1.75 1.75 0 0 0 1.75-1.75V15.5H18zM8.25 7a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5zM12 17.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0m-7 1.999a.5.5 0 0 0 .777.416l3.002-1.999a.5.5 0 0 0 0-.832l-3.002-2a.5.5 0 0 0-.777.417z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedReceiptPlay',
-    mixins: [icon]
+  name: 'FluentIconOutlinedReceiptPlay',
+  mixins: [icon]
 };
 </script>

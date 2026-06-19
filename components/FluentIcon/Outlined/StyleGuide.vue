@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M14.036 2.777a2.75 2.75 0 0 1 3.368 1.945l2.718 10.142a2.75 2.75 0 0 1-1.945 3.368L11.9 19.915A2.75 2.75 0 0 1 8.53 17.97L5.813 7.828A2.75 2.75 0 0 1 7.758 4.46l6.278-1.683Zm-8.233 8.881 1.762 6.57a3.732 3.732 0 0 0 1.002 1.714l-.443-.024a2.75 2.75 0 0 1-2.602-2.89l.281-5.37Zm8.621-7.432L8.146 5.91a1.25 1.25 0 0 0-.884 1.53l2.717 10.143a1.25 1.25 0 0 0 1.531.884l6.279-1.683a1.25 1.25 0 0 0 .884-1.53L15.955 5.11a1.25 1.25 0 0 0-1.53-.884ZM4.878 10.18l-.355 6.796c-.037.698.12 1.362.424 1.94l-.414-.161a2.75 2.75 0 0 1-1.582-3.553l1.927-5.022Zm4.863-3.146a1 1 0 1 1 .518 1.932 1 1 0 0 1-.518-1.932Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M14.034 2.778a2.75 2.75 0 0 1 3.368 1.945l2.718 10.142a2.75 2.75 0 0 1-1.945 3.368l-6.278 1.682a2.75 2.75 0 0 1-3.368-1.944L5.81 7.828A2.75 2.75 0 0 1 7.756 4.46zm-8.233 8.88 1.762 6.571a3.73 3.73 0 0 0 1.002 1.713l-.443-.023a2.75 2.75 0 0 1-2.602-2.89zm8.621-7.431L8.144 5.909A1.25 1.25 0 0 0 7.26 7.44l2.718 10.142a1.25 1.25 0 0 0 1.53.884l6.279-1.682a1.25 1.25 0 0 0 .884-1.531L15.953 5.111a1.25 1.25 0 0 0-1.53-.884M4.876 10.18l-.355 6.796c-.037.699.12 1.363.424 1.94l-.414-.16a2.75 2.75 0 0 1-1.582-3.553zM9.74 7.035a1 1 0 1 1 .518 1.932 1 1 0 0 1-.518-1.932" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedStyleGuide',
-    mixins: [icon]
+  name: 'FluentIconOutlinedStyleGuide',
+  mixins: [icon]
 };
 </script>

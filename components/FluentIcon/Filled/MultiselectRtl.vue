@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M21.708 3.293a1 1 0 0 0-1.415 0L19 4.586l-.292-.293a1 1 0 1 0-1.415 1.414l1 1a1 1 0 0 0 1.415 0l2-2a1 1 0 0 0 0-1.414M3 16.993h11.004a1 1 0 0 1 .117 1.994l-.117.006H3A1 1 0 0 1 2.883 17zM3 11h11.004a1 1 0 0 1 .117 1.993l-.117.007H3a1 1 0 0 1-.117-1.993zm0-6h11.004a1 1 0 0 1 .117 1.993L14.003 7H3a1 1 0 0 1-.117-1.993zm17.293 11.293a1 1 0 0 1 1.415 1.414l-2 2a1 1 0 0 1-1.415 0l-1-1a1 1 0 0 1 1.415-1.414l.293.293z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledMultiselectRtl',
+  mixins: [icon]
+};
+</script>

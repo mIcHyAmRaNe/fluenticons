@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M11.25 7.999h7.5l.24.008a3.25 3.25 0 0 1 3.005 3.057l.005.185v7.5a3.25 3.25 0 0 1-3.066 3.245l-.184.005h-7.5a3.25 3.25 0 0 1-3.245-3.066L8 18.75v-7.5a3.25 3.25 0 0 1 3.066-3.245l.184-.005ZM9.5 18.749l.005.127.018.157a1.75 1.75 0 0 0 1.584 1.46l.143.006h7.5a1.75 1.75 0 0 0 1.744-1.607l.006-.143v-7.5a1.75 1.75 0 0 0-1.75-1.75h-7.5a1.75 1.75 0 0 0-1.744 1.606l-.006.144v7.5ZM15.75 5a3.252 3.252 0 0 1 3 1.998h-1.778a1.744 1.744 0 0 0-1.079-.492L15.75 6.5h-7.5a1.75 1.75 0 0 0-1.744 1.606L6.5 8.25v7.5l.01.196c.045.399.224.757.49 1.029v1.776a3.252 3.252 0 0 1-1.995-2.817L5 15.75v-7.5a3.25 3.25 0 0 1 3.066-3.245L8.25 5h7.5Zm-3-3c1.3 0 2.421.763 2.941 1.866L15.75 4l-1.777-.001a1.744 1.744 0 0 0-1.08-.493L12.75 3.5h-7.5a1.75 1.75 0 0 0-1.744 1.606L3.5 5.25v7.5c0 .477.19.91.5 1.225v1.776a3.252 3.252 0 0 1-1.995-2.817L2 12.75v-7.5a3.25 3.25 0 0 1 3.066-3.245L5.25 2h7.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M2 9.25A7.25 7.25 0 0 1 9.25 2h3.5a3.25 3.25 0 0 1 3 2h-1.775c-.316-.31-.748-.5-1.225-.5h-3.5A5.75 5.75 0 0 0 3.5 9.25v3.5c0 .477.19.91.5 1.225v1.775a3.25 3.25 0 0 1-2-3zm3 1C5 7.35 7.35 5 10.25 5h5.5a3.25 3.25 0 0 1 3 2h-1.775c-.316-.31-.748-.5-1.225-.5h-5.5a3.75 3.75 0 0 0-3.75 3.75v5.5c0 .477.19.91.5 1.225v1.775a3.25 3.25 0 0 1-2-3zM11.25 8A3.25 3.25 0 0 0 8 11.25v7.5A3.25 3.25 0 0 0 11.25 22h7.5A3.25 3.25 0 0 0 22 18.75v-7.5A3.25 3.25 0 0 0 18.75 8zM9.5 11.25c0-.966.784-1.75 1.75-1.75h7.5c.966 0 1.75.784 1.75 1.75v7.5a1.75 1.75 0 0 1-1.75 1.75h-7.5a1.75 1.75 0 0 1-1.75-1.75z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedTabs',
-    mixins: [icon]
+  name: 'FluentIconOutlinedTabs',
+  mixins: [icon]
 };
 </script>

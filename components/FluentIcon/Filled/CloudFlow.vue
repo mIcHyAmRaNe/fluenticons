@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M6.087 7a5.752 5.752 0 0 1 11.326 0h.087a4.002 4.002 0 0 1 3.875 3.004A1.797 1.797 0 0 0 21.25 10h-4a1.75 1.75 0 0 0-1.75 1.75v.826a3.036 3.036 0 0 0-2.203 2l-.142.424H6a4 4 0 0 1 0-8h.087ZM16.5 11.75a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1-.75-.75V15h-.323a.536.536 0 0 0-.508.366l-.914 2.742a2.036 2.036 0 0 1-1.932 1.392H12v1.75a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1-.75-.75v-4a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 .75.75V18h.823c.23 0 .436-.148.508-.366l.914-2.742a2.036 2.036 0 0 1 1.932-1.392h.323v-1.75Zm1.5 2.518V15h2.5v-2.5H18v1.732a1.056 1.056 0 0 1 0 .036ZM8 18v2.5h2.5V18H8Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M12 2a6 6 0 0 0-5.92 5.02A4.5 4.5 0 0 0 6.5 16h6.68l.133-.507a3 3 0 0 1 2.487-2.214 3.75 3.75 0 0 1 6.153-1.128q.047-.32.047-.651a4.5 4.5 0 0 0-4.08-4.48A6 6 0 0 0 12 2m7.25 11.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m-3.034 2.25h.471a2.751 2.751 0 1 0-.142-1.5h-.33a2 2 0 0 0-1.934 1.495l-1.013 3.881a.5.5 0 0 1-.484.374h-.795a2.75 2.75 0 1 0-.289 1.5h1.084a2 2 0 0 0 1.935-1.495l1.013-3.881a.5.5 0 0 1 .484-.374M8 20.25a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledCloudFlow',
-    mixins: [icon]
+  name: 'FluentIconFilledCloudFlow',
+  mixins: [icon]
 };
 </script>

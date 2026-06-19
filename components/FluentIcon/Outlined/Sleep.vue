@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M13.378 3.026a9.004 9.004 0 0 1 7.308 13.494 9.004 9.004 0 0 1-15.21.611.675.675 0 0 1 .328-1.018c3.391-1.214 5.208-2.621 6.262-4.633 1.11-2.118 1.396-4.439.62-7.62a.675.675 0 0 1 .692-.834Zm1.011 1.638.065.39c.417 2.704.065 4.975-1.06 7.122-1.141 2.18-3 3.704-6.015 4.94a7.504 7.504 0 1 0 7.677-12.283l-.332-.093-.335-.076Zm-3.395-1.01.006.098V9a2 2 0 1 1-1.499-1.937L9.5 4.764 6 5.83V10a2 2 0 1 1-1.499-1.937L4.5 5.273a.75.75 0 0 1 .43-.678l.102-.04 5-1.52a.75.75 0 0 1 .943.524l.019.094Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M13.378 3.026A9.004 9.004 0 1 1 5.475 17.13a.675.675 0 0 1 .329-1.019c3.391-1.214 5.208-2.62 6.262-4.633 1.11-2.118 1.396-4.438.62-7.619a.675.675 0 0 1 .692-.834m1.011 1.637.065.39c.417 2.705.065 4.976-1.06 7.122-1.141 2.18-3 3.704-6.015 4.94a7.504 7.504 0 1 0 7.677-12.283l-.332-.092zm-3.395-1.01L11 3.75V9a2 2 0 1 1-1.499-1.937l-.001-2.3L6 5.829V10a2 2 0 1 1-1.499-1.937L4.5 5.273a.75.75 0 0 1 .43-.679l.102-.039 5-1.521a.75.75 0 0 1 .943.525z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedSleep',
-    mixins: [icon]
+  name: 'FluentIconOutlinedSleep',
+  mixins: [icon]
 };
 </script>

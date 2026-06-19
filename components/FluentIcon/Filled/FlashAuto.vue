@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M12.75 1.996a.75.75 0 0 1 .738.89l-.026.097-1.671 5.013h4.46a.75.75 0 0 1 .61 1.187l-.07.082-11.995 12.5c-.509.531-1.376.087-1.287-.605l.018-.096 1.767-7.068H2.75a.75.75 0 0 1-.742-.86l.021-.096 3-10.5a.75.75 0 0 1 .612-.536l.11-.008h7Zm5.394 9.373.05.105 3.75 9.496a.75.75 0 0 1-1.351.643l-.044-.092-.998-2.525h-4.11l-.996 2.525a.75.75 0 0 1-.876.453l-.097-.031a.75.75 0 0 1-.453-.876l.03-.097 3.75-9.496c.235-.595 1.043-.63 1.345-.105Zm-.648 2.422-1.463 3.705h2.926l-1.463-3.705Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M7.425 2.83A1.25 1.25 0 0 1 8.603 2h6.453a1.25 1.25 0 0 1 1.186 1.645L14.79 8h3.96c1.103 0 1.665 1.327.897 2.12l-.672.693c-.732-1.17-2.564-1.081-3.107.294l-1.941 4.916-5.341 5.513c-1.054 1.088-2.872.106-2.541-1.372l1.27-5.668-1.57-.006a1.75 1.75 0 0 1-1.641-2.337zm10.769 8.645 3.75 9.495a.75.75 0 0 1-1.352.643l-.044-.092-.998-2.525h-4.11l-.996 2.525a.75.75 0 0 1-.876.453l-.097-.03a.75.75 0 0 1-.453-.876l.03-.098 3.75-9.495a.73.73 0 0 1 .45-.434.77.77 0 0 1 .546.02c.14.058.264.162.349.309zm-2.162 6.021h2.926l-1.463-3.705z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledFlashAuto',
-    mixins: [icon]
+  name: 'FluentIconFilledFlashAuto',
+  mixins: [icon]
 };
 </script>

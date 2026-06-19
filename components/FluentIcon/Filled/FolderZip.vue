@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,16 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M13.997 6.5h-.176L9.647 9.979l-.156.119a2.25 2.25 0 0 1-1.088.393l-.196.009L2 10.499v7.251l.005.154A2.25 2.25 0 0 0 4.25 20h11.247v-3.502h-.25a.75.75 0 0 1 0-1.5h.25v-1.5h-.25a.75.75 0 0 1 0-1.5h.25v-1.003h-.75a.75.75 0 0 1-.75-.75V6.5ZM15.497 6.5h1.5v2.75h-1.5V6.5ZM18.497 6.5h1.253a2.25 2.25 0 0 1 2.229 1.938l.016.158.005.154v9a2.25 2.25 0 0 1-2.096 2.245L19.75 20h-2.753v-2h.25a.75.75 0 0 0 0-1.5h-.25V15h.25a.75.75 0 0 0 0-1.5h-.25v-2.505h.75a.75.75 0 0 0 .75-.75V6.5Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M9.49 4.402A2.25 2.25 0 0 0 8.208 4H4.25l-.154.005A2.25 2.25 0 0 0 2 6.25v2.749L8.207 9l.104-.007a.75.75 0 0 0 .291-.106l.085-.06 3.063-2.554-2.103-1.752-.156-.119Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M17.5 22.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V18a1.5 1.5 0 0 1 3 0zm1.25-17A3.25 3.25 0 0 1 22 8.75v9a3.25 3.25 0 0 1-3 3.24V18a3 3 0 0 0-3-3v-1h-2.25a.75.75 0 0 0 0 1.5h.593A3 3 0 0 0 13 18v3H5.25A3.25 3.25 0 0 1 2 17.75V9.5h6.129a2.25 2.25 0 0 0 1.59-.66l3.342-3.34zM16 14h2.25a.75.75 0 0 0 0-1.5H16zm-2.25-3a.75.75 0 0 0 0 1.5H16V11zM16 11h2.25a.75.75 0 0 0 0-1.5H16zm-2.25-3a.75.75 0 0 0 0 1.5H16V8zM8.129 3a2.25 2.25 0 0 1 1.59.66l1.531 1.53-2.59 2.59a.75.75 0 0 1-.531.22H2V6.25A3.25 3.25 0 0 1 5.25 3z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledFolderZip',
-    mixins: [icon]
+  name: 'FluentIconFilledFolderZip',
+  mixins: [icon]
 };
 </script>

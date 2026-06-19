@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M18.832 3.445A1 1 0 0 0 18 3H6l-.125.008a1 1 0 0 0-.77.545l-3 6-.052.125a1 1 0 0 0 .204.991l8.982 9.983a.976.976 0 0 0 .532.322l.112.02a1.009 1.009 0 0 0 .556-.093A4.376 4.376 0 0 1 12 19v-.5a2.5 2.5 0 0 1 2.5-2.5h.95a3.75 3.75 0 1 1 5.742-4.719l.551-.612.084-.107a1 1 0 0 0 .067-1.01l-3-6-.062-.107ZM9.423 11h5.153L12 17.342 9.423 11Zm-4.177 0h2.018l1.66 4.087L5.246 11Zm1.372-6h2.004l-1.3 4H4.618l2-4Zm4.108 0h2.547l1.299 4H9.427l1.299-4Zm4.651 0h2.004l2 4h-2.704l-1.3-4ZM21.5 17a1.5 1.5 0 0 1 1.5 1.5v.5c0 1.971-1.86 4-5 4-3.14 0-5-2.029-5-4v-.5a1.5 1.5 0 0 1 1.5-1.5h7ZM18 10.5a2.75 2.75 0 1 1 0 5.5 2.75 2.75 0 0 1 0-5.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M18.832 3.445A1 1 0 0 0 18 3H6l-.125.008a1 1 0 0 0-.77.545l-3 6-.052.125a1 1 0 0 0 .204.991l8.982 9.983a.98.98 0 0 0 .532.322l.112.02a1.01 1.01 0 0 0 .887-.352l.26-.29a4 4 0 0 1-.03-.477v-.103A2.77 2.77 0 0 1 15.774 17h.274l.002-.002a3.5 3.5 0 0 1 4.678-5.199l1.016-1.13.084-.107a1 1 0 0 0 .067-1.01l-3-6zM9.423 11h5.153L12 17.342zm-4.177 0h2.018l1.66 4.087zm1.372-6h2.004l-1.3 4H4.618zm4.108 0h2.547l1.299 4H9.427zm4.651 0h2.004l2 4h-2.704zM21 14.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m2 5.375C23 21.431 21.714 23 18.5 23S14 21.437 14 19.875v-.103c0-.98.794-1.772 1.773-1.772h5.454c.98 0 1.773.793 1.773 1.772z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledPremiumPerson',
-    mixins: [icon]
+  name: 'FluentIconFilledPremiumPerson',
+  mixins: [icon]
 };
 </script>

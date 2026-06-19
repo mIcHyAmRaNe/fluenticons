@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M3.078 9.04a3.25 3.25 0 0 1 2.47-3.876l9.413-2.087a3.25 3.25 0 0 1 3.876 2.47l1.043 4.703h-1.537l-.97-4.38a1.75 1.75 0 0 0-2.088-1.329L5.872 6.628a1.75 1.75 0 0 0-1.33 2.087l.34 1.535H3.346zm16.041 4.71h1.537l.268 1.21a3.25 3.25 0 0 1-2.47 3.876l-9.413 2.087a3.25 3.25 0 0 1-3.876-2.47L4.122 13.75h1.536l.971 4.379a1.75 1.75 0 0 0 2.087 1.33l9.414-2.087a1.75 1.75 0 0 0 1.33-2.088zM1 12a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5A.75.75 0 0 1 1 12m6 0a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5A.75.75 0 0 1 7 12m6.75-.75a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5zM19 12a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5A.75.75 0 0 1 19 12" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconOutlinedAlignStraighten',
+  mixins: [icon]
+};
+</script>

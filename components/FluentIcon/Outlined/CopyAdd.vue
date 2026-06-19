@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,18 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="m3.5 6.75.003-2.123A2.25 2.25 0 0 0 2 6.75v10.504a4.75 4.75 0 0 0 4.75 4.75h5.064a6.515 6.515 0 0 1-1.08-1.5H6.75a3.25 3.25 0 0 1-3.25-3.25V6.75Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M18 11.174V4.25A2.25 2.25 0 0 0 15.75 2h-9A2.25 2.25 0 0 0 4.5 4.25v13a2.25 2.25 0 0 0 2.25 2.25h3.563a6.475 6.475 0 0 1-.294-1.5H6.75a.75.75 0 0 1-.75-.75v-13a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75V11c.516 0 1.018.06 1.5.174Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M16.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm.501 8.503V18h2.496a.5.5 0 0 0 0-1H17v-2.5a.5.5 0 1 0-1 0V17h-2.504a.5.5 0 0 0 0 1H16v2.503a.5.5 0 1 0 1 0Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M5.503 4.627 5.5 6.75v10.504a3.25 3.25 0 0 0 3.25 3.25h1.984a6.5 6.5 0 0 0 1.08 1.5H8.75A4.75 4.75 0 0 1 4 17.254V6.75c0-.98.627-1.815 1.503-2.123M20 4.25v7.772a6.5 6.5 0 0 0-1.5-.709V4.25a.75.75 0 0 0-.75-.75h-9a.75.75 0 0 0-.75.75v13c0 .414.336.75.75.75h1.269q.061.782.294 1.5H8.75a2.25 2.25 0 0 1-2.25-2.25v-13A2.25 2.25 0 0 1 8.75 2h9A2.25 2.25 0 0 1 20 4.25m2 13.25a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0m-5 .5.001 2.503a.5.5 0 1 1-1 0V18h-2.505a.5.5 0 0 1 0-1H16v-2.5a.5.5 0 1 1 1 0V17h2.497a.5.5 0 0 1 0 1z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedCopyAdd',
-    mixins: [icon]
+  name: 'FluentIconOutlinedCopyAdd',
+  mixins: [icon]
 };
 </script>

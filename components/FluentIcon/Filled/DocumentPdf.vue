@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,18 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M7.503 13.002a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 1 0v-.5H8.5a1.5 1.5 0 0 0 0-3h-.997Zm.997 2h-.497v-1H8.5a.5.5 0 1 1 0 1ZM14.998 13.501a.5.5 0 0 1 .5-.499h1.505a.5.5 0 1 1 0 1h-1.006l-.001 1.002h1.007a.5.5 0 0 1 0 1h-1.007l.002.497a.5.5 0 0 1-1 .002l-.003-.998v-.002l.003-2.002ZM11.5 13.002h.498a2 2 0 0 1 0 4H11.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm.5 3a1 1 0 0 0 0-2v2Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M12 8V2H6a2 2 0 0 0-2 2v6.668c-.591.281-1 .884-1 1.582v5.5c0 .698.409 1.3 1 1.582V20a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.668c.591-.281 1-.884 1-1.582v-5.5c0-.698-.409-1.3-1-1.582V10h-6a2 2 0 0 1-2-2Zm-7.25 4h14.5a.25.25 0 0 1 .25.25v5.5a.25.25 0 0 1-.25.25H4.75a.25.25 0 0 1-.25-.25v-5.5a.25.25 0 0 1 .25-.25Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M13.5 8V2.5l6 6H14a.5.5 0 0 1-.5-.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M3.75 15a2.5 2.5 0 0 1 0 5H2.5v1.25a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 .75-.75zM2.5 18.5h1.25a1 1 0 1 0 0-2H2.5zM9.25 15A2.75 2.75 0 0 1 12 17.75v1.5A2.75 2.75 0 0 1 9.25 22h-1.5a.75.75 0 0 1-.75-.75v-5.5a.75.75 0 0 1 .75-.75zm-.75 5.5h.75c.69 0 1.25-.56 1.25-1.25v-1.5c0-.69-.56-1.25-1.25-1.25H8.5zm8.25-5.5a.75.75 0 0 1 0 1.5H14.5V18h1.75a.75.75 0 0 1 0 1.5H14.5v1.75a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 .75-.75zM12 8a2 2 0 0 0 2 2h6v10a2 2 0 0 1-2 2h-2.67a1.74 1.74 0 0 0 .17-.75v-.75h.75a1.75 1.75 0 0 0 1.102-3.11A1.748 1.748 0 0 0 16.75 14h-3a1.75 1.75 0 0 0-1.684 1.275A3.74 3.74 0 0 0 9.25 14h-1.5c-.69 0-1.287.401-1.571.982A3.5 3.5 0 0 0 4 14.01V4a2 2 0 0 1 2-2h6zm7.5.5H14a.5.5 0 0 1-.5-.5V2.5z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledDocumentPdf',
-    mixins: [icon]
+  name: 'FluentIconFilledDocumentPdf',
+  mixins: [icon]
 };
 </script>

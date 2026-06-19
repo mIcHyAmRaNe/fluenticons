@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M10.005 9.098V4c0-.872 1.027-1.31 1.656-.756l.08.078 4.57 4.951a1 1 0 0 1-.006 1.364l-.089.083-2.733 2.278 2.734 2.28a1 1 0 0 1 .17 1.353l-.076.093-4.57 4.954c-.592.641-1.643.267-1.73-.567l-.005-.11v-5.106l-.64.533a1 1 0 0 1-1.372-1.45l.091-.086 1.92-1.6v-.59L8.085 10.1a1 1 0 0 1 1.18-1.61l.1.074.64.534V4v5.098Zm2 4.272v4.072l2.123-2.301-2.123-1.77ZM17 11a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM6 11a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm6.005-4.442v4.067l2.123-1.768-2.123-2.3Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M11.617 2.076a1 1 0 0 1 1.09.217l5 5a1 1 0 0 1-.082 1.488L13.6 12l4.024 3.22a1 1 0 0 1 .082 1.487l-5 5A1 1 0 0 1 11 21v-6.92l-3.375 2.7a1 1 0 0 1-1.25-1.56L10.4 12 6.375 8.78a1 1 0 0 1 1.25-1.56L11 9.92V3a1 1 0 0 1 .617-.924M13 14.081v4.505l2.503-2.503zm0-4.162 2.503-2.002L13 5.414zM20 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0M5 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledBluetoothConnected',
-    mixins: [icon]
+  name: 'FluentIconFilledBluetoothConnected',
+  mixins: [icon]
 };
 </script>

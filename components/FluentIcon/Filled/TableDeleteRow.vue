@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,16 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M3.75 2H8v5H6.25A3.25 3.25 0 0 1 3 3.75v-1A.75.75 0 0 1 3.75 2ZM9.5 2h5v5h-5V2ZM21 2.75a.75.75 0 0 0-.75-.75H16v5h1.75A3.25 3.25 0 0 0 21 3.75v-1ZM20.25 22a.75.75 0 0 0 .75-.75v-1A3.25 3.25 0 0 0 17.75 17H16v5h4.25ZM9.5 22h5v-5h-5v5ZM3.75 22H8v-5H6.25A3.25 3.25 0 0 0 3 20.25v1c0 .414.336.75.75.75ZM15.523 12.75h5.727a.75.75 0 0 0 0-1.5h-5.727a1.826 1.826 0 0 1-.072.076l-.674.674.674.674.072.076ZM8.727 12.75c.023-.026.047-.051.072-.076L9.473 12l-.674-.674a1.845 1.845 0 0 1-.072-.076H2.75a.75.75 0 0 0 0 1.5h5.977Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M14.53 14.53a.75.75 0 0 1-1.06 0L12 13.06l-1.47 1.47a.75.75 0 1 1-1.06-1.06L10.94 12l-1.47-1.47a.75.75 0 1 1 1.06-1.06L12 10.94l1.47-1.47a.75.75 0 1 1 1.06 1.06L13.06 12l1.47 1.47a.75.75 0 0 1 0 1.06Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M3.75 2H8v5H6.25A3.25 3.25 0 0 1 3 3.75v-1A.75.75 0 0 1 3.75 2M9.5 2h5v5h-5zm11.5.75a.75.75 0 0 0-.75-.75H16v5h1.75A3.25 3.25 0 0 0 21 3.75zM20.25 22a.75.75 0 0 0 .75-.75v-1A3.25 3.25 0 0 0 17.75 17H16v5zM9.5 22h5v-5h-5zm-5.75 0H8v-5H6.25A3.25 3.25 0 0 0 3 20.25v1c0 .414.336.75.75.75m11.773-9.25h5.727a.75.75 0 0 0 0-1.5h-5.727l-.072.076-.674.674.674.674zm-6.796 0q.035-.039.072-.076L9.473 12l-.674-.674-.072-.076H2.75a.75.75 0 0 0 0 1.5zm5.803 1.78a.75.75 0 0 1-1.06 0L12 13.06l-1.47 1.47a.75.75 0 1 1-1.06-1.06L10.94 12l-1.47-1.47a.75.75 0 1 1 1.06-1.06L12 10.94l1.47-1.47a.75.75 0 1 1 1.06 1.06L13.06 12l1.47 1.47a.75.75 0 0 1 0 1.06" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledTableDeleteRow',
-    mixins: [icon]
+  name: 'FluentIconFilledTableDeleteRow',
+  mixins: [icon]
 };
 </script>

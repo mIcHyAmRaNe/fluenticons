@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,16 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M12.65 2.638a2.25 2.25 0 0 1 3.191.024l4.91 5.008a2.25 2.25 0 0 1-.007 3.158l-.687.694a6.454 6.454 0 0 0-1.655-.46l1.275-1.29a.75.75 0 0 0 .003-1.052l-4.91-5.008a.75.75 0 0 0-1.063-.008l-7.004 6.938 4.673 4.674a6.473 6.473 0 0 0-.362 1.758l-5.377-5.376-1.529 1.514a.75.75 0 0 0 .002 1.069l5.1 5.007a.75.75 0 0 0 1.058-.008l.804-.812c.086.579.249 1.133.477 1.65l-.215.218a2.25 2.25 0 0 1-3.175.022l-5.1-5.007a2.25 2.25 0 0 1-.007-3.204l9.599-9.509ZM17.5 23a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M15.84 2.661a2.25 2.25 0 0 0-3.19-.023l-9.598 9.508a2.25 2.25 0 0 0 .007 3.204l5.1 5.008a2.25 2.25 0 0 0 3.175-.023l.215-.217a6.5 6.5 0 0 1-.478-1.65l-.803.812a.75.75 0 0 1-1.059.008L4.11 14.28a.75.75 0 0 1-.002-1.068l1.529-1.515 5.377 5.377a6.5 6.5 0 0 1 .362-1.759l-4.673-4.673 7.003-6.938a.75.75 0 0 1 1.064.007l4.91 5.009a.75.75 0 0 1-.003 1.052l-1.276 1.29c.58.08 1.135.237 1.655.46l.687-.695a2.25 2.25 0 0 0 .008-3.158z" />
+    <path :fill="fill" :fill-opacity="opacity" d="M19.289 12.297A5.5 5.5 0 1 1 17.473 12m.027 0a5.5 5.5 0 0 1 1.789.297Zm0 0h-.027Z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedEraserMedium',
-    mixins: [icon]
+  name: 'FluentIconOutlinedEraserMedium',
+  mixins: [icon]
 };
 </script>

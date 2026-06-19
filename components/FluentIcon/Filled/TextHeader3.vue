@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M15.394 7.947c.196-.39.8-1.197 2.356-1.197.79 0 1.342.244 1.688.57.343.324.562.802.562 1.43 0 .575-.14.953-.317 1.214-.18.268-.44.476-.772.636-.692.336-1.559.4-2.13.4a1 1 0 1 0 0 2c.571 0 1.438.064 2.13.4.331.16.592.368.772.636.176.26.317.639.317 1.214 0 .948-.802 2-2.25 2-1.636 0-2.158-.707-2.32-1.118a1 1 0 0 0-1.86.736c.498 1.256 1.816 2.382 4.18 2.382 2.552 0 4.25-1.948 4.25-4 0-.925-.234-1.703-.659-2.333a3.693 3.693 0 0 0-.889-.917c.33-.24.636-.541.89-.917.424-.63.658-1.408.658-2.333 0-1.122-.406-2.144-1.188-2.883-.779-.736-1.852-1.117-3.062-1.117-2.445 0-3.673 1.36-4.144 2.303a1 1 0 1 0 1.788.894ZM4 6a1 1 0 0 0-2 0v12a1 1 0 1 0 2 0v-5h6v5a1 1 0 1 0 2 0V6a1 1 0 1 0-2 0v5H4V6Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M17.499 4.5c2.414 0 4.5 1.834 4.5 4.25 0 1.33-.633 2.482-1.604 3.25.971.768 1.604 1.92 1.604 3.25 0 2.416-2.086 4.25-4.5 4.25-1.748 0-3.684-.972-4.411-2.59a1 1 0 0 1 1.824-.82c.328.73 1.423 1.41 2.587 1.41 1.452 0 2.5-1.076 2.5-2.25S18.951 13 17.499 13h-.5a1 1 0 0 1 0-2h.5c1.452 0 2.5-1.076 2.5-2.25s-1.048-2.25-2.5-2.25c-1.164 0-2.259.68-2.587 1.41a1 1 0 0 1-1.824-.82c.727-1.618 2.663-2.59 4.411-2.59M11 5a1 1 0 0 1 1 1v12a1 1 0 1 1-2 0v-5H4v5a1 1 0 1 1-2 0V6a1 1 0 0 1 2 0v5h6V6a1 1 0 0 1 1-1" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledTextHeader3',
-    mixins: [icon]
+  name: 'FluentIconFilledTextHeader3',
+  mixins: [icon]
 };
 </script>

@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M23 17.5a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0m-6.35-2.854.07-.057a.5.5 0 0 1 .637.057l.058.07a.5.5 0 0 1-.058.638L15.711 17h4.79l.089.008a.5.5 0 0 1 .41.492l-.008.09a.5.5 0 0 1-.492.41h-4.789l1.646 1.646.058.07a.5.5 0 0 1-.765.638l-2.516-2.517-.05-.066-.034-.061-.03-.08-.014-.086.002-.11.019-.085.023-.059.044-.077.04-.05zM7 7V5a3 3 0 0 1 5-2.236A3 3 0 0 1 17 5v2h1.5A1.5 1.5 0 0 1 20 8.5v2.998a6.5 6.5 0 0 0-1.5-.422V8.5h-4v3.232A6.5 6.5 0 0 0 13 12.81V8.5H5.5V18A2.5 2.5 0 0 0 8 20.5h3.732A6.5 6.5 0 0 0 12.81 22H8a4 4 0 0 1-4-4V8.5A1.5 1.5 0 0 1 5.5 7zm3-3.5A1.5 1.5 0 0 0 8.5 5v2h3V5A1.5 1.5 0 0 0 10 3.5M15.5 7V5a1.5 1.5 0 0 0-2.656-.956c.101.3.156.622.156.956v2z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconOutlinedShoppingBagArrowLeft',
+  mixins: [icon]
+};
+</script>

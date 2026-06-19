@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 .263.01.523.03.78a6.515 6.515 0 0 1 1.644-1.135C3.861 7.214 7.524 3.667 12 3.667c4.595 0 8.333 3.738 8.333 8.333 0 4.476-3.547 8.139-7.978 8.326a6.516 6.516 0 0 1-1.136 1.644c.258.02.518.03.781.03 5.523 0 10-4.478 10-10Zm-16 .023a5.5 5.5 0 1 0 1 0v5.77l1.646-1.647a.5.5 0 0 1 .708.708l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5a.5.5 0 0 1 .708-.708L6 17.793v-5.77ZM4 20h5a.5.5 0 0 1 0 1H4a.5.5 0 0 1 0-1Zm8.493-13.352A.75.75 0 0 0 11 6.75v6l.007.102a.75.75 0 0 0 .743.648h4l.102-.007A.75.75 0 0 0 15.75 12H12.5V6.75l-.007-.102Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M4.5 11a8.5 8.5 0 1 1 8.188 8.494 6.5 6.5 0 0 1-.68 1.457q.49.05.992.049c5.523 0 10-4.477 10-10S18.523 1 13 1 3 5.477 3 11q0 .501.048.991a6.5 6.5 0 0 1 1.458-.68A9 9 0 0 1 4.5 11m8.493-5.352a.75.75 0 0 0-1.493.102v6l.007.102a.75.75 0 0 0 .743.648h4l.102-.007A.75.75 0 0 0 16.25 11H13V5.75zM1 17.5a5.5 5.5 0 0 1 5-5.477v5.77l-1.646-1.647a.5.5 0 0 0-.708.708l2.5 2.5a.5.5 0 0 0 .708 0l2.5-2.5a.5.5 0 0 0-.708-.708L7 17.793v-5.77A5.5 5.5 0 1 1 1 17.5m8.5 3A.5.5 0 0 0 9 20H4a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedClockArrowDownload',
-    mixins: [icon]
+  name: 'FluentIconOutlinedClockArrowDownload',
+  mixins: [icon]
 };
 </script>

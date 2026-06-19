@@ -211,3 +211,11 @@ svg:not(.main-stop, .alt-stop, .st0, .st1, .st2, .st3, .st4) {
   border-radius: 20px;
   z-index: 9;
 }
+
+/* Buy Me a Coffee widget theme adaptation */
+.dark #bmc-wbtn {
+  background-color: #a855f7 !important;
+}
+.dark #bmc-wbtn:hover {
+  background-color: #9333ea !important;
+}

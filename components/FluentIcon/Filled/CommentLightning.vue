@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M23 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0ZM18.529 3h-1.433a.5.5 0 0 0-.468.324l-1.125 3a.5.5 0 0 0 .469.676h.778l-.773 2.317a.518.518 0 0 0 .926.447l2.625-4.039A.47.47 0 0 0 19.135 5H18.5l.497-1.325A.5.5 0 0 0 18.529 3ZM17.5 13a6.478 6.478 0 0 0 4.5-1.81v3.56a3.25 3.25 0 0 1-3.25 3.249h-5.785l-5.387 3.817A1 1 0 0 1 6 21V18h-.75A3.25 3.25 0 0 1 2 14.749v-8.5A3.25 3.25 0 0 1 5.25 3h6.772A6.5 6.5 0 0 0 17.5 13Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M16.318 1h4.827a.5.5 0 0 1 .436.745L19.751 5h1.495a.75.75 0 0 1 .565 1.244l-4.824 5.508c-.505.576-1.443.085-1.258-.658L16.5 8h-3.002a.5.5 0 0 1-.453-.713l2.82-6A.5.5 0 0 1 16.318 1M5.25 3h8.705L12.14 6.862A1.5 1.5 0 0 0 13.497 9h1.723l-.461 1.853c-.44 1.76 1.784 2.923 2.98 1.558L22 7.545v7.205A3.25 3.25 0 0 1 18.75 18H13l-5 3.75c-.824.618-2 .03-2-1V18h-.75A3.25 3.25 0 0 1 2 14.75v-8.5A3.25 3.25 0 0 1 5.25 3" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledCommentLightning',
-    mixins: [icon]
+  name: 'FluentIconFilledCommentLightning',
+  mixins: [icon]
 };
 </script>

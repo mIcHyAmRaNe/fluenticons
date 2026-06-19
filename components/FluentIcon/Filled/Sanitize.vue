@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M3.621 10.62a3 3 0 0 1 0-4.242L6.88 3.121a3 3 0 0 1 4.242 0l3.667 3.666q-.069.106-.123.22A1.75 1.75 0 0 0 12 8.5v4.528a4 4 0 0 0-.5-.031c-.665 0-1.246.165-1.694.391a2.9 2.9 0 0 0-.753.542 2 2 0 0 0-.232.286 1.86 1.86 0 0 0-.3 1.306zM17 7.75v5.75a.5.5 0 0 0 1 0v-5a.75.75 0 0 1 1.5 0v5.497a.5.5 0 1 0 1 0V9.75a.75.75 0 0 1 1.5 0v7c0 .623-.274 1.385-.56 2.036a21 21 0 0 1-.977 1.902A2.64 2.64 0 0 1 18.158 22h-1.139a2.75 2.75 0 0 1-2.225-1.135l-1.377-1.897-1.658-1.891-1.907-1.192a.75.75 0 0 1-.352-.636.86.86 0 0 1 .15-.476c.06-.087.127-.157.185-.21.119-.109.264-.204.42-.283.318-.16.745-.284 1.245-.284.53 0 1.07.153 1.503.316L13 14.25V8.5a.75.75 0 0 1 1.5 0v5a.5.5 0 0 0 1 0V7.75a.75.75 0 0 1 1.5 0M4.251 14a.75.75 0 0 1 .75.75v.747h.746a.75.75 0 0 1 0 1.5H5v.756a.75.75 0 0 1-1.5 0v-.756h-.75a.75.75 0 0 1 0-1.5h.751v-.748a.75.75 0 0 1 .75-.75m4.75 4.25a.75.75 0 0 0-1.5 0v.747H6.75a.75.75 0 0 0 0 1.5h.751v.756a.75.75 0 1 0 1.5 0v-.756h.746a.75.75 0 0 0 0-1.5H9z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledSanitize',
+  mixins: [icon]
+};
+</script>

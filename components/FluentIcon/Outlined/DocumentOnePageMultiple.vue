@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M7.747 5.5A.75.75 0 0 0 7 6.25c0 .414.334.75.747.75h6.006a.75.75 0 0 0 .747-.75.75.75 0 0 0-.747-.75zM7 15.25c0-.414.334-.75.747-.75h6.006c.413 0 .747.336.747.75s-.334.75-.747.75H7.747A.75.75 0 0 1 7 15.25M7.747 10a.75.75 0 0 0-.747.75c0 .414.334.75.747.75h6.006a.75.75 0 0 0 .747-.75.75.75 0 0 0-.747-.75zM6.25 2A2.25 2.25 0 0 0 4 4.25v13a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-13A2.25 2.25 0 0 0 15.25 2zM5.5 4.25q0-.038.004-.077A.75.75 0 0 1 6.25 3.5h9a.75.75 0 0 1 .75.75v13a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75zM6.629 20.5A2.25 2.25 0 0 0 8.75 22h6.5A4.75 4.75 0 0 0 20 17.25V6.75a2.25 2.25 0 0 0-1.5-2.122V17.25a3.25 3.25 0 0 1-3.25 3.25z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconOutlinedDocumentOnePageMultiple',
+  mixins: [icon]
+};
+</script>

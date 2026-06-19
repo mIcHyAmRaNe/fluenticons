@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M3.5 2A1.5 1.5 0 0 0 2 3.5v13A1.5 1.5 0 0 0 3.5 18H9v-3.316c0-.763.316-1.49.874-2.01L14 8.821V8.5A1.5 1.5 0 0 0 12.5 7H11V3.5A1.5 1.5 0 0 0 9.5 2zM6 5.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0M5.25 9.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5M6 11.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0M7.75 6.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5m.75 2.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m-.75 3.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5m9.444-3.061a1.75 1.75 0 0 0-2.388 0l-4.25 3.966a1.75 1.75 0 0 0-.556 1.28V20.5a1.5 1.5 0 0 0 1.5 1.5h2a1.5 1.5 0 0 0 1.5-1.5V18h2v2.5a1.5 1.5 0 0 0 1.5 1.5h2a1.5 1.5 0 0 0 1.5-1.5v-5.815a1.75 1.75 0 0 0-.556-1.28zm-1.365 1.096a.25.25 0 0 1 .342 0l4.25 3.967a.25.25 0 0 1 .079.183V20.5h-2V18a1.5 1.5 0 0 0-1.5-1.5h-2a1.5 1.5 0 0 0-1.5 1.5v2.5h-2v-5.815a.25.25 0 0 1 .08-.183zM9.25 2h-5.5Z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledBuildingHome',
+  mixins: [icon]
+};
+</script>

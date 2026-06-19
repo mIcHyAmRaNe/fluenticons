@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,16 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M8.707 7.084c-1.02-.407-2.03.604-1.624 1.624l1.606 4.028a4.75 4.75 0 0 0 2.541 2.607l4.325 1.854c1.038.445 2.086-.604 1.642-1.641l-1.854-4.326a4.75 4.75 0 0 0-2.607-2.541L8.707 7.084Zm1.375 5.096-1.39-3.488 3.488 1.39a3.25 3.25 0 0 1 1.784 1.74l1.608 3.75-3.751-1.607a3.25 3.25 0 0 1-1.739-1.785Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm-7.75 9h-.692A8.504 8.504 0 0 1 11 3.558v.692a.75.75 0 0 0 1.5 0v-.736A8.502 8.502 0 0 1 20.442 11h-.692a.75.75 0 0 0 0 1.5h.735a8.501 8.501 0 0 1-7.985 7.985v-.735a.75.75 0 0 0-1.5 0v.692A8.502 8.502 0 0 1 3.514 12.5h.736a.75.75 0 0 0 0-1.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2m0 1.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17M7.083 8.708c-.406-1.02.605-2.03 1.624-1.624l.206.082 3.746 1.425a4.75 4.75 0 0 1 2.753 2.753l.162.428 1.623 3.784c.445 1.037-.604 2.086-1.641 1.641l-3.757-1.61-.456-.173a4.75 4.75 0 0 1-2.753-2.753L7.209 9.025zm2.999 3.473c.32.802.946 1.444 1.74 1.784l.52.223 2.976 1.132-1.141-3.003-.212-.496a3.25 3.25 0 0 0-1.784-1.739l-3.489-1.39z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedCompassNorthwest',
-    mixins: [icon]
+  name: 'FluentIconOutlinedCompassNorthwest',
+  mixins: [icon]
 };
 </script>

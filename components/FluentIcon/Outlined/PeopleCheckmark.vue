@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M12.81 13 4 13a2 2 0 0 0-2 2V16.5l.005.23C2.165 20.044 5.778 21 8.5 21c1.03 0 2.189-.137 3.239-.487-.23-.44-.413-.91-.537-1.403-.698.224-1.52.359-2.385.385L8.5 19.5l-.317-.005c-1.263-.039-2.44-.308-3.266-.753C3.95 18.222 3.5 17.509 3.5 16.5v-1.501l.01-.101a.506.506 0 0 1 .136-.253.51.51 0 0 1 .253-.136l.101-.01h7.732c.287-.55.651-1.055 1.077-1.499ZM13 6.5a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Zm-7.5 0c0-1.654 1.346-3 3-3s3 1.346 3 3-1.346 3-3 3-3-1.346-3-3Zm15.5 1a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0Zm-5.5 0c0-1.103.897-2 2-2s2 .897 2 2-.897 2-2 2-2-.897-2-2Zm7.5 10a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Zm-2.146-2.354a.5.5 0 0 0-.708 0L16.5 18.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M5.5 7a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0M8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8m7.5 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0M17 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4.25 13A2.25 2.25 0 0 0 2 15.25v.278a2 2 0 0 0 .014.208 4.5 4.5 0 0 0 .778 2.07C3.61 18.974 5.172 20 8 20c1.369 0 2.441-.24 3.276-.62a6.5 6.5 0 0 1-.268-1.55c-.645.38-1.595.67-3.008.67-2.422 0-3.486-.85-3.98-1.555a3 3 0 0 1-.513-1.359l-.007-.079v-.257a.75.75 0 0 1 .75-.75h7.482c.249-.477.555-.919.909-1.317A2.2 2.2 0 0 0 11.75 13zM23 17.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0m-2.146-2.354a.5.5 0 0 0-.708 0L16.5 18.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedPeopleCheckmark',
-    mixins: [icon]
+  name: 'FluentIconOutlinedPeopleCheckmark',
+  mixins: [icon]
 };
 </script>

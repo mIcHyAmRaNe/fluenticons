@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M5.5 4A1.5 1.5 0 0 0 4 5.5V8a1 1 0 0 1-2 0V5.5A3.5 3.5 0 0 1 5.5 2H8a1 1 0 0 1 0 2H5.5Zm0 16A1.5 1.5 0 0 1 4 18.5V16a1 1 0 1 0-2 0v2.5A3.5 3.5 0 0 0 5.5 22H8a1 1 0 1 0 0-2H5.5ZM20 5.5A1.5 1.5 0 0 0 18.5 4H16a1 1 0 1 1 0-2h2.5A3.5 3.5 0 0 1 22 5.5V8a1 1 0 1 1-2 0V5.5ZM18.5 20a1.5 1.5 0 0 0 1.5-1.5V16a1 1 0 1 1 2 0v2.5a3.5 3.5 0 0 1-3.5 3.5H16a1 1 0 1 1 0-2h2.5ZM7.75 6a1 1 0 0 0-1 1v1.5a1 1 0 0 0 2 0V8H11v8H9.75a1 1 0 1 0 0 2h4.5a1 1 0 1 0 0-2H13V8h2.25v.5a1 1 0 1 0 2 0V7a1 1 0 0 0-1-1h-8.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M5.25 4C4.56 4 4 4.56 4 5.25V8a1 1 0 0 1-2 0V5.25A3.25 3.25 0 0 1 5.25 2H8a1 1 0 0 1 0 2zm0 16C4.56 20 4 19.44 4 18.75V16a1 1 0 1 0-2 0v2.75A3.25 3.25 0 0 0 5.25 22H8a1 1 0 1 0 0-2zM20 5.25C20 4.56 19.44 4 18.75 4H16a1 1 0 1 1 0-2h2.75A3.25 3.25 0 0 1 22 5.25V8a1 1 0 1 1-2 0zM18.75 20c.69 0 1.25-.56 1.25-1.25V16a1 1 0 1 1 2 0v2.75A3.25 3.25 0 0 1 18.75 22H16a1 1 0 1 1 0-2zm-12-12a1 1 0 0 1 1-1h8.5a1 1 0 0 1 1 1v1.5a1 1 0 1 1-2 0V9H13v6h1.25a1 1 0 1 1 0 2h-4.5a1 1 0 1 1 0-2H11V9H8.75v.5a1 1 0 1 1-2 0z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledScanType',
-    mixins: [icon]
+  name: 'FluentIconFilledScanType',
+  mixins: [icon]
 };
 </script>

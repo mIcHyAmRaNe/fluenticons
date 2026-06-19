@@ -1,9 +1,22 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.41 2.508.047-.006h.087l.106.021.074.03 6 3a.5.5 0 0 1 0 .894L13.618 9l5.106 2.553a.5.5 0 0 1-.003.896l-5.757 2.837.036 5.711a.5.5 0 0 1-.752.435l-6-3.5A.5.5 0 0 1 6 17.5l.002-11.544.018-.097.022-.059.012-.025a.502.502 0 0 1 .06-.093l.066-.066.072-.05 6.074-3.035.085-.023Z" fill="#212121"/></svg>
-  </template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M12.585 2.082a.75.75 0 0 0-.67 0l-6 3a.75.75 0 0 0-.415.67V17.48a.75.75 0 0 0 .351.636l6 3.77A.75.75 0 0 0 13 21.25v-6.034l5.585-2.793a.75.75 0 0 0 0-1.341l-4.658-2.33 4.658-2.329a.75.75 0 0 0 0-1.341z" />
+  </svg>
+</template>
 
-  <script>
-    export default {
-      name: 'FluentIconFilledFluent',
-  };
-  </script>
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledFluent',
+  mixins: [icon]
+};
+</script>

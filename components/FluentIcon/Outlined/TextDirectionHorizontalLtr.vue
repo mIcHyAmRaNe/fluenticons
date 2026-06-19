@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="m3.053 12.97 3.753-9.496c.236-.595 1.043-.63 1.345-.104l.05.105 3.747 9.5a.75.75 0 0 1-1.352.643l-.043-.092L9.556 11H5.443l-.995 2.52a.75.75 0 0 1-.876.454l-.098-.031a.75.75 0 0 1-.452-.876l.03-.098Zm4.45-7.178L6.036 9.5h2.928L7.503 5.792ZM12 7.75c0 .414.336.75.75.75h5.69l-.72.72a.75.75 0 1 0 1.06 1.06l2-2a.75.75 0 0 0 0-1.06l-2-2a.75.75 0 1 0-1.06 1.06l.72.72h-5.69a.75.75 0 0 0-.75.75Zm-9 9.5c0 .414.336.75.75.75h14.69l-.72.72a.75.75 0 1 0 1.06 1.06l2-2a.75.75 0 0 0 0-1.06l-2-2a.75.75 0 1 0-1.06 1.06l.72.72H3.75a.75.75 0 0 0-.75.75Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M12.5 4.75a.75.75 0 0 0-1.5 0v8.5a.75.75 0 0 0 1.5 0V9.5h1.25a.75.75 0 0 0 0-1.5H12.5zM3.75 5a.75.75 0 1 0 0 1.5h4.245c-.162 1.634-1.328 4.092-4.46 5.032a.75.75 0 0 0 .43 1.436c4.39-1.317 5.726-5.15 5.532-7.286A.75.75 0 0 0 8.75 5zm13.97 1.22a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.75.75 0 1 1-1.06-1.06l.72-.72h-2.19a.75.75 0 0 1 0-1.5h2.19l-.72-.72a.75.75 0 0 1 0-1.06m0 8a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.75.75 0 1 1-1.06-1.06l.72-.72H3.75a.75.75 0 0 1 0-1.5h14.69l-.72-.72a.75.75 0 0 1 0-1.06" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedTextDirectionHorizontalLtr',
-    mixins: [icon]
+  name: 'FluentIconOutlinedTextDirectionHorizontalLtr',
+  mixins: [icon]
 };
 </script>

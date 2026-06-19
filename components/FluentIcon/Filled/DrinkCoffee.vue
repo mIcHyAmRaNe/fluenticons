@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M3.941 5C2.87 5 2 5.87 2 6.941V12a8 8 0 0 0 15.911 1.197h.738a3.349 3.349 0 0 0 0-6.697h-.7c-.2-.86-.97-1.5-1.89-1.5H3.94ZM18 8h.649a1.849 1.849 0 1 1 0 3.697H18V8Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M5.5 2.75a.75.75 0 0 0-1.5 0c0 1.27.928 1.917 1.506 2.32l.064.044c.68.476.93.705.93 1.136a.75.75 0 0 0 1.5 0c0-1.27-.928-1.917-1.506-2.32l-.064-.044C5.75 3.41 5.5 3.18 5.5 2.75M4.821 8A1.82 1.82 0 0 0 3 9.821V14a8 8 0 0 0 15.419 3h1.331a3.25 3.25 0 0 0 0-6.5H19v-.679A1.82 1.82 0 0 0 17.179 8zm14.929 7.5h-.89A8 8 0 0 0 19 14v-2h.75a1.75 1.75 0 1 1 0 3.5M8.75 2a.75.75 0 0 1 .75.75c0 .431.25.66.93 1.136l.064.044C11.072 4.333 12 4.98 12 6.25a.75.75 0 0 1-1.5 0c0-.431-.25-.66-.93-1.136l-.064-.044C8.928 4.667 8 4.02 8 2.75A.75.75 0 0 1 8.75 2m4.75.75a.75.75 0 0 0-1.5 0c0 1.27.928 1.917 1.506 2.32l.064.044c.68.476.93.705.93 1.136a.75.75 0 0 0 1.5 0c0-1.27-.928-1.917-1.506-2.32l-.064-.044c-.68-.476-.93-.705-.93-1.136" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledDrinkCoffee',
-    mixins: [icon]
+  name: 'FluentIconFilledDrinkCoffee',
+  mixins: [icon]
 };
 </script>

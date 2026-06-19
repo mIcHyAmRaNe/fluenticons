@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M11.75 4.25A5.752 5.752 0 0 0 6.087 9H6a4 4 0 0 0 0 8h3.168a1.75 1.75 0 0 1 .345-1.987l2.5-2.5a1.75 1.75 0 0 1 2.819 1.987h2.336a1.75 1.75 0 0 1 2.82-1.987l1.406 1.406A4 4 0 0 0 17.5 9h-.087a5.752 5.752 0 0 0-5.663-4.75Zm2.03 10.03a.75.75 0 1 0-1.06-1.06l-2.5 2.5a.75.75 0 0 0 0 1.06l2.5 2.5a.75.75 0 1 0 1.06-1.06L12.56 17h6.88l-1.22 1.22a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 1 0-1.06 1.06l1.22 1.22h-6.88l1.22-1.22Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M6.08 9.02a6.001 6.001 0 0 1 11.84 0 4.5 4.5 0 0 1 3.75 6.175l-1.683-1.682a1.75 1.75 0 0 0-2.819 1.987h-2.336a1.75 1.75 0 0 0-2.82-1.987l-2.5 2.5A1.75 1.75 0 0 0 9.169 18H6.5a4.5 4.5 0 0 1-.42-8.98m7.7 6.26a.75.75 0 1 0-1.06-1.06l-2.5 2.5a.75.75 0 0 0 0 1.06l2.5 2.5a.75.75 0 1 0 1.06-1.06L12.56 18h6.88l-1.22 1.22a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 1 0-1.06 1.06l1.22 1.22h-6.88z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledCloudSwap',
-    mixins: [icon]
+  name: 'FluentIconFilledCloudSwap',
+  mixins: [icon]
 };
 </script>

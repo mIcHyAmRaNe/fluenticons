@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M6.527 21.068 8.294 14H5.75a.75.75 0 0 1-.72-.956l3-10.5A.75.75 0 0 1 8.75 2h7a.75.75 0 0 1 .712.987L14.79 8h4.46a.75.75 0 0 1 .54 1.27l-1.687 1.758a6.5 6.5 0 0 0-7.046 7.342l-3.262 3.4c-.532.554-1.455.044-1.269-.702ZM17.5 23a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Zm3.354-7.146-4 4a.5.5 0 0 1-.707 0l-2-2a.5.5 0 0 1 .707-.708l1.646 1.647 3.646-3.647a.5.5 0 0 1 .708.708Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M7.424 2.83A1.25 1.25 0 0 1 8.602 2h6.453a1.25 1.25 0 0 1 1.186 1.645L14.79 8h3.958c1.104 0 1.666 1.327.898 2.12l-.958.988a6.5 6.5 0 0 0-7.54 7.781l-2.563 2.647c-1.054 1.088-2.872.106-2.541-1.372l1.27-5.668-1.57-.006a1.75 1.75 0 0 1-1.641-2.337zM23 17.5a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0m-2.146-2.354a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708l1.646 1.647 3.646-3.647a.5.5 0 0 1 .708 0" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledFlashCheckmark',
-    mixins: [icon]
+  name: 'FluentIconFilledFlashCheckmark',
+  mixins: [icon]
 };
 </script>

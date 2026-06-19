@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M13.409 2.512a3.75 3.75 0 0 0-2.818 0l-2.19.888 9.592 3.73 3.374-1.303a1.747 1.747 0 0 0-.46-.275l-7.498-3.04ZM22 7.19l-9.25 3.574v6.841l5.643-5.643A3.287 3.287 0 0 1 22 11.26V7.19Zm-10.75 3.574v9.897l-.187.746a2.17 2.17 0 0 0-.044.226 3.748 3.748 0 0 1-.428-.145l-7.498-3.04A1.75 1.75 0 0 1 2 16.826V7.19l9.25 3.574ZM2.633 5.827 12 9.446l3.917-1.514-9.543-3.71-3.281 1.33c-.17.069-.324.162-.46.275ZM19.1 12.669l-5.903 5.903a2.686 2.686 0 0 0-.706 1.247l-.458 1.831a1.087 1.087 0 0 0 1.319 1.318l1.83-.457a2.685 2.685 0 0 0 1.248-.707l5.902-5.902A2.286 2.286 0 0 0 19.1 12.67Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M13.409 2.513a3.75 3.75 0 0 0-2.818 0l-2.19.888 9.592 3.73 3.374-1.303a1.8 1.8 0 0 0-.46-.275zM22 7.191l-9.25 3.574v6.841l5.643-5.643A3.29 3.29 0 0 1 22 11.261zm-10.75 3.574v9.897l-.187.747a2 2 0 0 0-.044.225 4 4 0 0 1-.428-.145l-7.498-3.04A1.75 1.75 0 0 1 2 16.827V7.192zM2.633 5.828 12 9.447l3.917-1.514-9.543-3.71-3.281 1.33q-.256.104-.46.275M19.1 12.67l-5.903 5.903a2.7 2.7 0 0 0-.706 1.247l-.458 1.831a1.087 1.087 0 0 0 1.319 1.318l1.83-.457a2.7 2.7 0 0 0 1.248-.707l5.902-5.902A2.286 2.286 0 0 0 19.1 12.67" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledBoxEdit',
-    mixins: [icon]
+  name: 'FluentIconFilledBoxEdit',
+  mixins: [icon]
 };
 </script>

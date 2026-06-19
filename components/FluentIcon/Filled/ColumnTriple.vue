@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M6.237 3c.967 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 6.237 21h-2.5a1.75 1.75 0 0 1-1.75-1.75V4.75a1.75 1.75 0 0 1 1.607-1.743L3.737 3h2.5Zm14.026 0c.967 0 1.75.784 1.75 1.75v14.5a1.75 1.75 0 0 1-1.75 1.75h-2.5a1.75 1.75 0 0 1-1.75-1.75V4.75c0-.966.784-1.75 1.75-1.75h2.5Zm-7.026 0c.967 0 1.75.784 1.75 1.75v14.5a1.75 1.75 0 0 1-1.75 1.75h-2.5a1.75 1.75 0 0 1-1.75-1.75V4.75c0-.966.784-1.75 1.75-1.75h2.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M4.5 21A2.5 2.5 0 0 1 2 18.5v-13A2.5 2.5 0 0 1 4.5 3h1A2.5 2.5 0 0 1 8 5.5v13A2.5 2.5 0 0 1 5.5 21zm7 0A2.5 2.5 0 0 1 9 18.5v-13A2.5 2.5 0 0 1 11.5 3h1A2.5 2.5 0 0 1 15 5.5v13a2.5 2.5 0 0 1-2.5 2.5zm4.5-2.5a2.5 2.5 0 0 0 2.5 2.5h1a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 19.5 3h-1A2.5 2.5 0 0 0 16 5.5z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledColumnTriple',
-    mixins: [icon]
+  name: 'FluentIconFilledColumnTriple',
+  mixins: [icon]
 };
 </script>

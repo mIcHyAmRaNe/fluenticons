@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="M5.5 7a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0M8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8m7.5 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0M17 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4.25 13A2.25 2.25 0 0 0 2 15.25v.278a2 2 0 0 0 .014.208 4.5 4.5 0 0 0 .778 2.07C3.61 18.974 5.172 20 8 20c1.369 0 2.441-.24 3.276-.62a6.5 6.5 0 0 1-.268-1.55c-.645.38-1.595.67-3.008.67-2.422 0-3.486-.85-3.98-1.555a3 3 0 0 1-.513-1.359l-.007-.079v-.257a.75.75 0 0 1 .75-.75h7.482c.249-.477.555-.919.909-1.317A2.2 2.2 0 0 0 11.75 13zM23 17.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0m-4.945-3.08a.577.577 0 0 0-1.11 0l-.557 1.788h-1.803c-.566 0-.8.754-.343 1.1l1.458 1.105-.557 1.787c-.175.561.441 1.028.899.681l1.458-1.104 1.458 1.104c.458.347 1.074-.12.899-.68l-.557-1.788 1.458-1.104c.458-.347.223-1.101-.343-1.101h-1.803z" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconOutlinedPeopleStar',
+  mixins: [icon]
+};
+</script>

@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M15 18c.835.629 1.875 1.001 3 1.001a4.978 4.978 0 0 0 3-.999v3.246a.75.75 0 0 1-1.09.67l-.09-.055L18 20.591l-1.82 1.272a.75.75 0 0 1-1.172-.51l-.007-.105L15 18.001Zm4.25-14.996a2.75 2.75 0 0 1 2.745 2.582l.005.168.001 5.246a5.027 5.027 0 0 0-1.5-1.331L20.5 5.754a1.25 1.25 0 0 0-1.122-1.244l-.128-.006H4.75a1.25 1.25 0 0 0-1.244 1.122l-.006.128v9.5c0 .647.492 1.18 1.122 1.243l.128.007h8.92c.1.172.21.338.33.496v1.004H4.75a2.75 2.75 0 0 1-2.745-2.583L2 15.254v-9.5a2.75 2.75 0 0 1 2.582-2.745l.168-.005h14.5ZM18 10A4 4 0 1 1 18 18 4 4 0 0 1 18 10Zm-6.75 2.5a.75.75 0 0 1 .102 1.493L11.25 14h-4.5a.75.75 0 0 1-.102-1.493l.102-.007h4.5Zm6-5.5a.75.75 0 0 1 .102 1.493l-.102.007H6.75a.75.75 0 0 1-.102-1.493L6.75 7h10.5Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M4.75 3A2.75 2.75 0 0 0 2 5.75V11a5 5 0 0 1 8 6v1h9.25A2.75 2.75 0 0 0 22 15.25v-9.5A2.75 2.75 0 0 0 19.25 3zm2 4h10.5a.75.75 0 0 1 0 1.5H6.75a.75.75 0 0 1 0-1.5M12 12.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75M6 10a4 4 0 1 0 0 8.001A4 4 0 0 0 6 10m3 8.001c-.835.628-1.874 1-3 1a4.98 4.98 0 0 1-3-.998v3.246c0 .57.605.92 1.09.669l.09-.055L6 20.592l1.82 1.272a.75.75 0 0 0 1.172-.51L9 21.249z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledCertificate',
-    mixins: [icon]
+  name: 'FluentIconFilledCertificate',
+  mixins: [icon]
 };
 </script>

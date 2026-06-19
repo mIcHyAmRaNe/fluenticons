@@ -1,0 +1,22 @@
+<template>
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+      <stop class="main-stop" offset="0%" :stop-color="start" />
+      <stop class="alt-stop" offset="100%" :stop-color="end" />
+    </linearGradient>
+    <radialGradient v-if="fill === 'url(#g2)'" id="g2" cx = "50%" cy = "50%" r = "50%">
+      <stop :stop-color="start" offset = "0%"/>
+      <stop :stop-color="end" offset = "100%"/>
+    </radialGradient>
+    <path :fill="fill" :fill-opacity="opacity" d="m6.156 9.323-.002.002-.004.003-.01.008a2 2 0 0 0-.126.104 5 5 0 0 0-.302.291c-.24.253-.548.629-.837 1.132-.582 1.015-1.071 2.528-.796 4.551.271 1.997 1.11 3.666 2.528 4.83C8.021 21.404 9.935 22 12.25 22c2.387 0 4.293-.895 5.554-2.43 1.25-1.521 1.808-3.596 1.675-5.864-.128-2.176-1.313-3.827-2.36-5.285l-.299-.417c-1.142-1.612-2.043-3.097-1.824-5.175A.75.75 0 0 0 14.25 2c-.382 0-.82.118-1.242.296a6.5 6.5 0 0 0-1.373.8c-.925.698-1.85 1.75-2.343 3.156C8.8 7.654 9.05 8.99 9.41 9.963c.237.639-.02 1.27-.407 1.454a.706.706 0 0 1-.927-.31L7.27 9.576a.75.75 0 0 0-1.113-.252" />
+  </svg>
+</template>
+
+<script>
+import icon from "../../../mixins/icon.js"
+
+export default {
+  name: 'FluentIconFilledFire',
+  mixins: [icon]
+};
+</script>

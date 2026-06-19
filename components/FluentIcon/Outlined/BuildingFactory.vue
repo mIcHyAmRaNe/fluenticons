@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M2.924 4.129A2.25 2.25 0 0 1 5.171 2h1.158a2.25 2.25 0 0 1 2.246 2.129l.838 15.5A2.25 2.25 0 0 1 7.167 22H4.333a2.25 2.25 0 0 1-2.247-2.371l.838-15.5ZM5.171 3.5a.75.75 0 0 0-.749.71l-.838 15.5a.75.75 0 0 0 .75.79h2.833a.75.75 0 0 0 .748-.79l-.837-15.5a.75.75 0 0 0-.75-.71H5.172ZM9.512 22H19.75A2.25 2.25 0 0 0 22 19.75V6a.75.75 0 0 0-1.27-.541l-4.98 4.781V6a.75.75 0 0 0-1.229-.578L9.855 9.284l.101 1.864 4.294-3.554V12a.75.75 0 0 0 1.27.541L20.5 7.76v11.99a.75.75 0 0 1-.75.75h-1V16A1.75 1.75 0 0 0 17 14.25h-4A1.75 1.75 0 0 0 11.25 16v4.5h-.92a3.247 3.247 0 0 1-.818 1.5Zm7.738-6v4.25h-4.5V16a.25.25 0 0 1 .25-.25h4a.25.25 0 0 1 .25.25Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M5.17 2a2.25 2.25 0 0 0-2.247 2.129l-.838 15.5A2.25 2.25 0 0 0 4.332 22h2.834a2.25 2.25 0 0 0 2.246-2.371l-.838-15.5A2.25 2.25 0 0 0 6.328 2zm-.75 2.21a.75.75 0 0 1 .749-.71h1.158a.75.75 0 0 1 .749.71l.837 15.5a.75.75 0 0 1-.748.79H4.332a.75.75 0 0 1-.749-.79zM9.511 22c.395-.412.683-.928.818-1.5h1.17v-4.25c0-.966.783-1.75 1.75-1.75h4c.966 0 1.75.784 1.75 1.75v4.25h.75a.75.75 0 0 0 .75-.75V7.713l-5.241 4.838a.75.75 0 0 1-1.26-.551V7.713l-4.027 3.718-.105-1.944 4.374-4.038A.75.75 0 0 1 15.5 6v4.287l5.241-4.838A.75.75 0 0 1 22 6v13.75A2.25 2.25 0 0 1 19.75 22zm3.488-5.75v4.25h4.5v-4.25a.25.25 0 0 0-.25-.25h-4a.25.25 0 0 0-.25.25" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconOutlinedBuildingFactory',
-    mixins: [icon]
+  name: 'FluentIconOutlinedBuildingFactory',
+  mixins: [icon]
 };
 </script>

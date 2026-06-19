@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,16 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="m9.256 9 .238-1.5h1.481L10.738 9H9.256Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M17.75 2.001a2.25 2.25 0 0 1 2.245 2.096L20 4.25v15.498a2.25 2.25 0 0 1-2.096 2.245l-.154.005H6.25a2.25 2.25 0 0 1-2.245-2.096L4 19.75V4.251a2.25 2.25 0 0 1 2.096-2.245l.154-.005h11.5Zm-7.355 9.16a.75.75 0 1 0 1.482.234l.142-.895h.731a.75.75 0 0 0 0-1.5h-.494l.238-1.5h.756a.75.75 0 0 0 0-1.5h-.519l.162-1.025a.75.75 0 1 0-1.481-.234L11.212 6h-1.48l.161-1.025a.75.75 0 0 0-1.481-.234L8.212 6H7.25a.75.75 0 1 0 0 1.5h.725L7.738 9H6.75a.75.75 0 1 0 0 1.5h.75l-.105.66a.75.75 0 0 0 1.482.235l.142-.895H10.5l-.105.66Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="m9.256 8.999.238-1.5h1.481l-.237 1.5zM17.75 2a2.25 2.25 0 0 1 2.245 2.096L20 4.25v15.498a2.25 2.25 0 0 1-2.096 2.245l-.154.005H6.25a2.25 2.25 0 0 1-2.245-2.096L4 19.748V4.25a2.25 2.25 0 0 1 2.096-2.245L6.25 2zm-7.355 9.16a.75.75 0 1 0 1.482.234l.142-.895h.731a.75.75 0 0 0 0-1.5h-.494l.238-1.5h.756a.75.75 0 0 0 0-1.5h-.519l.162-1.025a.75.75 0 1 0-1.481-.234l-.2 1.259h-1.48l.161-1.025a.75.75 0 0 0-1.481-.234l-.2 1.259H7.25a.75.75 0 1 0 0 1.5h.725l-.237 1.5H6.75a.75.75 0 1 0 0 1.5h.75l-.105.66a.75.75 0 0 0 1.482.235l.142-.895H10.5z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledDocumentPageTopLeft',
-    mixins: [icon]
+  name: 'FluentIconFilledDocumentPageTopLeft',
+  mixins: [icon]
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,16 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M14.504 4.752a2.752 2.752 0 1 0-5.504 0V19.25a2.752 2.752 0 0 0 3.667 2.597 6.5 6.5 0 0 1 1.837-10.116V4.75ZM21.504 12.38A6.52 6.52 0 0 0 16 11.175V9.751a2.752 2.752 0 0 1 5.504 0v2.628ZM4.752 12a2.752 2.752 0 0 1 2.752 2.752v4.498a2.752 2.752 0 0 1-5.504 0v-4.498A2.752 2.752 0 0 1 4.752 12Z" :fill="fill" :fill-opacity="opacity" />
-
-<path d="M23 17.5a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0Zm-5 .5.001 2.504a.5.5 0 1 1-1 0V18h-2.505a.5.5 0 0 1 0-1H17v-2.5a.5.5 0 1 1 1 0V17h2.503a.5.5 0 1 1 0 1h-2.502Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M18.25 3A2.25 2.25 0 0 0 16 5.25v5.924A6.5 6.5 0 0 1 17.498 11h.002c1.081 0 2.101.264 2.998.731V5.25A2.25 2.25 0 0 0 18.25 3m-4.252 6.25v2.772a6.5 6.5 0 0 0-3 5.478 6.47 6.47 0 0 0 1.012 3.485q-.128.015-.26.015a2.25 2.25 0 0 1-2.25-2.25v-9.5a2.25 2.25 0 1 1 4.498 0M3 13.25a2.25 2.25 0 1 1 4.498 0v5.5a2.25 2.25 0 1 1-4.498 0zm20 4.25a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0m-5 .5.001 2.503a.5.5 0 1 1-1 0V18h-2.505a.5.5 0 0 1 0-1H17v-2.5a.5.5 0 1 1 1 0V17h2.497a.5.5 0 0 1 0 1z" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledDataBarVerticalAdd',
-    mixins: [icon]
+  name: 'FluentIconFilledDataBarVerticalAdd',
+  mixins: [icon]
 };
 </script>

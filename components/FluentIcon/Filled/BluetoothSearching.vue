@@ -1,6 +1,6 @@
 <template>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient v-if="fill === 'url(#g1)'" id="g1" :gradientTransform="`rotate(${angle})`">
       <stop class="main-stop" offset="0%" :stop-color="start" />
       <stop class="alt-stop" offset="100%" :stop-color="end" />
     </linearGradient>
@@ -8,14 +8,15 @@
       <stop :stop-color="start" offset = "0%"/>
       <stop :stop-color="end" offset = "100%"/>
     </radialGradient>
-<path d="M10.005 9.098V4c0-.872 1.027-1.31 1.656-.756l.08.078 4.57 4.951a1 1 0 0 1-.006 1.364l-.089.083-2.733 2.278 2.734 2.28a1 1 0 0 1 .17 1.353l-.076.093-4.57 4.954c-.592.641-1.643.267-1.73-.567l-.006-.11v-5.106l-.64.533a1 1 0 0 1-1.371-1.45l.091-.086 1.92-1.6v-.59L8.085 10.1a1 1 0 0 1 1.18-1.61l.1.074.64.534V4v5.098Zm2 4.272v4.072l2.123-2.301-2.123-1.77Zm7.877-6.131a1 1 0 0 1 1.41.113A7.138 7.138 0 0 1 23 11.995c0 1.73-.617 3.367-1.719 4.655a1 1 0 0 1-1.52-1.3A5.138 5.138 0 0 0 21 11.995c0-1.245-.44-2.419-1.231-3.346a1 1 0 0 1 .113-1.41Zm-2.265 2a1 1 0 0 1 1.41.113c.623.732.973 1.663.973 2.646a4.07 4.07 0 0 1-.98 2.652 1 1 0 0 1-1.52-1.3 2.07 2.07 0 0 0 .5-1.352 2.07 2.07 0 0 0-.496-1.35 1 1 0 0 1 .113-1.41Zm-5.612-2.681v4.067l2.123-1.768-2.123-2.3Z" :fill="fill" :fill-opacity="opacity" /></svg>
+    <path :fill="fill" :fill-opacity="opacity" d="M11.617 2.076a1 1 0 0 1 1.09.217l5 5a1 1 0 0 1-.082 1.488L13.6 12l4.024 3.22a1 1 0 0 1 .082 1.487l-5 5A1 1 0 0 1 11 21v-6.92l-3.375 2.7a1 1 0 0 1-1.25-1.56L10.4 12 6.375 8.78a1 1 0 0 1 1.25-1.56L11 9.92V3a1 1 0 0 1 .617-.924M13 14.081v4.505l2.503-2.503zm0-4.162 2.503-2.002L13 5.414zm5.5-.785a1 1 0 0 1 1.366.365c.442.765.634 1.627.634 2.501s-.192 1.736-.634 2.5a1 1 0 1 1-1.732-1c.239-.413.366-.917.366-1.5s-.127-1.087-.366-1.5a1 1 0 0 1 .365-1.366m3.285-2.084a1 1 0 0 0-1.57 1.239A5.97 5.97 0 0 1 21.5 12a5.97 5.97 0 0 1-1.285 3.711 1 1 0 0 0 1.57 1.239A7.97 7.97 0 0 0 23.5 12a7.97 7.97 0 0 0-1.715-4.95" />
+  </svg>
 </template>
 
 <script>
 import icon from "../../../mixins/icon.js"
 
 export default {
-    name: 'FluentIconFilledBluetoothSearching',
-    mixins: [icon]
+  name: 'FluentIconFilledBluetoothSearching',
+  mixins: [icon]
 };
 </script>
